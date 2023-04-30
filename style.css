@@ -11,4 +11,110 @@ body{
     overflow-x: hidden;
 }
 
-/*  Tema Warna nya mau apa */
+.wrapper{
+    width: 1100px;
+    margin: auto;
+    position: relative;   
+}
+
+/* LOGO NAVBAR */
+.logo a{
+    font-size: 60px;
+    font-weight: 800;
+    float: left;
+    font-family: Courier;
+    color: #6B705C;  
+}
+
+/* .logo a span{
+    color:#DA2F3A
+} */
+
+/* NAVBAR */
+.navbar{
+    float: right;
+    padding-right: 0px;
+}
+nav{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    line-height: 80px;
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    background-color: #D8AF98;
+    z-index: 1;
+    /* border-bottom: 1px solid #5B9883; */
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+nav ul li{
+    float: left;
+}
+nav ul li a{
+    background: #E5C5B2;
+    border-radius: 20px;
+    margin: 10px 15px 10px 15px ;
+    padding: 10px 15px 10px 15px;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    background-color: #B98B73;
+    color: #ffffff;
+    transition: 0.3s ease;  
+}
+
+
+
+
+/*=== START BERANDA===*/
+section{
+    margin: auto;
+    display: flex;
+    margin-bottom: 50px;
+}
+.h_img{
+    width: 100%;
+    /* height: 300px; */
+    overflow: hidden;
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    opacity: .6;
+    z-index: -1;
+}
+
+.h_img h1 span{
+    position: absolute;
+	left: 450px;
+	top: 60px;
+    font-size: 100px;
+    color:#565A4A
+}
+
+.h_img h1{
+    position: absolute;
+	left: 450px;
+	top: 320px;
+    font-size: 100px;
+	color: #565A4A;
+}
+
+.tekshome h2{
+    margin: 90px 5px 5px 75px;
+    font-size: 45px;
+	color: #192D43;
+}
+
+/*=== END BERANDA===*/

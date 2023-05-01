@@ -25,6 +25,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -65,17 +66,30 @@
     <!-- Navbar Start -->
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
-            <a href="index.php" class="navbar-brand ml-lg-3">
-                <h1 class="m-0 text-primary"><span class="text-dark">AYL</span> Beauty Spa </h1>
+            <a href="customer.php" class="navbar-brand ml-lg-3">
+                <h1 class="m-0 text-primary"><span class="text-dark">SPA</span> Center</h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav m-auto py-0">
-                    <a href="index.php" class="nav-item nav-link active">Home</a>
+                    <a href="customer.php" class="nav-item nav-link active">Home</a>
+                    <a href="about.php" class="nav-item nav-link">About</a>
+                    <a href="treatments.php" class="nav-item nav-link">Treatments</a>
+                    <a href="price.php" class="nav-item nav-link">Pricing</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="appointment.php" class="dropdown-item">Appointment</a>
+                            <a href="opening.php" class="dropdown-item">Open Hours</a>
+                            <a href="team.php" class="dropdown-item">Our Team</a>
+                            <a href="testimonials.php" class="dropdown-item">Testimonial</a>
+                        </div>
+                    </div>
+                    <a href="contact.php" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="../customer/customer.php" class="btn btn-primary d-none d-lg-block">Log In</a>
+                <a href="login.php" class="btn btn-primary d-none d-lg-block">Log In</a>
             </div>
         </nav>
     </div>
@@ -98,6 +112,7 @@
                             <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Spa & Beauty Center</h6>
                             <h3 class="display-3 text-capitalize text-white mb-3">Massage Treatment</h3>
                             <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum labore diam</p>
+                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Make Appointment</a>
                         </div>
                     </div>
                 </div>
@@ -108,6 +123,7 @@
                             <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Spa & Beauty Center</h6>
                             <h3 class="display-3 text-capitalize text-white mb-3">Facial Treatment</h3>
                             <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum labore diam</p>
+                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Make Appointment</a>
                         </div>
                     </div>
                 </div>
@@ -118,6 +134,7 @@
                             <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Spa & Beauty Center</h6>
                             <h3 class="display-3 text-capitalize text-white mb-3">Cellulite Treatment</h3>
                             <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum labore diam</p>
+                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Make Appointment</a>
                         </div>
                     </div>
                 </div>
@@ -535,6 +552,41 @@
                         <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a class="btn btn-lg btn-primary btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 pl-lg-5">
+                    <div class="row">
+                        <div class="col-sm-6 mb-5">
+                            <h5 class="text-white text-uppercase mb-4">Quick Links</h5>
+                            <div class="d-flex flex-column justify-content-start">
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Pricing Plan</a>
+                                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-5">
+                            <h5 class="text-white text-uppercase mb-4">Our Services</h5>
+                            <div class="d-flex flex-column justify-content-start">
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Body Massage</a>
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Stone Therapy</a>
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Facial Therapy</a>
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Skin Care</a>
+                                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Nail Care</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 mb-5">
+                            <h5 class="text-white text-uppercase mb-4">Newsletter</h5>
+                            <div class="w-100">
+                                <div class="input-group">
+                                    <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary px-4">Sign Up</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

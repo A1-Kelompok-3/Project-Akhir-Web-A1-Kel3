@@ -98,67 +98,66 @@
     <!-- Header Start -->
     <div class="jumbotron jumbotron-fluid bg-jumbotron" style="margin-bottom: 90px;">
         <div class="container text-center py-5">
-            <h3 class="text-white display-3 mb-4">Testimonial</h3>
+            <h3 class="text-white display-3 mb-4">Contact</h3>
             <div class="d-inline-flex align-items-center text-white">
                 <p class="m-0"><a class="text-white" href="">Home</a></p>
                 <i class="far fa-circle px-3"></i>
-                <p class="m-0">Testimonial</p>
+                <p class="m-0">Contact</p>
             </div>
         </div>
     </div>
     <!-- Header End -->
 
 
-    <!-- Testimonial Start -->
+    <!-- Contact Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-6 pb-5 pb-lg-0">
-                    <img class="img-fluid w-100" src="img/testimonial.jpg" alt="">
+            <div class="row">
+                <div class="col-lg-6" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <iframe class="position-absolute w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6872643787488!2d117.15159467449334!3d-0.46439833527911334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df678b4308b041b%3A0x23c8de7e3da2932b!2sPramuka%20Mart!5e0!3m2!1sid!2sid!4v1682936490172!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">Testimonial</h6>
-                    <h1 class="mb-4">What Our Clients Say!</h1>
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="position-relative">
-                            <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
-                            <div class="d-flex align-items-center mb-3">
-                                <img class="img-fluid rounded-circle" src="img/testimonial-1.jpg" style="width: 60px; height: 60px;" alt="">
-                                <div class="ml-3">
-                                    <h6 class="text-uppercase">Client Name</h6>
-                                    <span>Profession</span>
+                <div class="col-lg-6 pt-5 pb-lg-5">
+                    <div class="contact-form bg-light p-4 p-lg-5 my-lg-5">
+                        <h6 class="d-inline-block text-white text-uppercase bg-primary py-1 px-2">Contact</h6>
+                        <h1 class="mb-4">Contact For Any Query</h1>
+                        <div id="success"></div>
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <div class="form-row">
+                                <div class="col-sm-6 control-group">
+                                    <input type="text" class="form-control border-0 p-4" id="name" placeholder="Your Name"
+                                        required="required" data-validation-required-message="Please enter your name" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="col-sm-6 control-group">
+                                    <input type="email" class="form-control border-0 p-4" id="email" placeholder="Your Email"
+                                        required="required" data-validation-required-message="Please enter your email" />
+                                    <p class="help-block text-danger"></p>
                                 </div>
                             </div>
-                            <p class="m-0">Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum diam  sed clita dolore eos dolores magna erat dolore sed stet justo et dolor.</p>
-                        </div>
-                        <div class="position-relative">
-                            <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
-                            <div class="d-flex align-items-center mb-3">
-                                <img class="img-fluid rounded-circle" src="img/testimonial-2.jpg" style="width: 60px; height: 60px;" alt="">
-                                <div class="ml-3">
-                                    <h6 class="text-uppercase">Client Name</h6>
-                                    <span>Profession</span>
-                                </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control border-0 p-4" id="subject" placeholder="Subject"
+                                    required="required" data-validation-required-message="Please enter a subject" />
+                                <p class="help-block text-danger"></p>
                             </div>
-                            <p class="m-0">Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum diam  sed clita dolore eos dolores magna erat dolore sed stet justo et dolor.</p>
-                        </div>
-                        <div class="position-relative">
-                            <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
-                            <div class="d-flex align-items-center mb-3">
-                                <img class="img-fluid rounded-circle" src="img/testimonial-3.jpg" style="width: 60px; height: 60px;" alt="">
-                                <div class="ml-3">
-                                    <h6 class="text-uppercase">Client Name</h6>
-                                    <span>Profession</span>
-                                </div>
+                            <div class="control-group">
+                                <textarea class="form-control border-0 py-3 px-4" rows="3" id="message" placeholder="Message"
+                                    required="required"
+                                    data-validation-required-message="Please enter your message"></textarea>
+                                <p class="help-block text-danger"></p>
                             </div>
-                            <p class="m-0">Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum diam  sed clita dolore eos dolores magna erat dolore sed stet justo et dolor.</p>
-                        </div>
+                            <div>
+                                <button class="btn btn-primary py-3 px-4" type="submit" id="sendMessageButton">Send
+                                    Message</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
+    <!-- Contact End -->
 
 
     <!-- Footer Start -->

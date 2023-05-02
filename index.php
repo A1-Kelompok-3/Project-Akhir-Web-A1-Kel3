@@ -5,8 +5,6 @@
     <meta charset="utf-8">
     <title>AYL Center - Beauty & Spa</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <!-- <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description"> -->
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -73,7 +71,6 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav m-auto py-0">
-                    <a href="index.php" class="nav-item nav-link active">Home</a>
                 </div>
                 <a href="../customer/customer.php" class="btn btn-primary d-none d-lg-block">Log In</a>
             </div>
@@ -174,7 +171,6 @@
                     <h4 class="text-white font-weight-medium px-3">Body Massage</h4>
                     <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum</p>
                     <div class="w-100 bg-white text-center p-4" >
-                        <a class="btn btn-primary" href="">Make Order</a>
                     </div>
                 </div>
             </div>
@@ -184,7 +180,6 @@
                     <h4 class="text-white font-weight-medium px-3">Stone Therapy</h4>
                     <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum</p>
                     <div class="w-100 bg-white text-center p-4" >
-                        <a class="btn btn-primary" href="">Make Order</a>
                     </div>
                 </div>
             </div>
@@ -194,7 +189,6 @@
                     <h4 class="text-white font-weight-medium px-3">Facial Therapy</h4>
                     <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum</p>
                     <div class="w-100 bg-white text-center p-4" >
-                        <a class="btn btn-primary" href="">Make Order</a>
                     </div>
                 </div>
             </div>
@@ -204,7 +198,6 @@
                     <h4 class="text-white font-weight-medium px-3">Skin Care</h4>
                     <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum</p>
                     <div class="w-100 bg-white text-center p-4" >
-                        <a class="btn btn-primary" href="">Make Order</a>
                     </div>
                 </div>
             </div>
@@ -214,7 +207,6 @@
                     <h4 class="text-white font-weight-medium px-3">Stream Bath</h4>
                     <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum</p>
                     <div class="w-100 bg-white text-center p-4" >
-                        <a class="btn btn-primary" href="">Make Order</a>
                     </div>
                 </div>
             </div>
@@ -224,60 +216,7 @@
                     <h4 class="text-white font-weight-medium px-3">Face Masking</h4>
                     <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum</p>
                     <div class="w-100 bg-white text-center p-4" >
-                        <a class="btn btn-primary" href="">Make Order</a>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center bg-appointment mx-0">
-            <div class="col-lg-6 py-5">
-                <div class="p-5 my-5" style="background: rgba(33, 30, 28, 0.7);">
-                    <h1 class="text-white text-center mb-4">Make Appointment</h1>
-                    <form>
-                        <div class="form-row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control bg-transparent p-4" placeholder="Your Name" required="required" />
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <input type="email" class="form-control bg-transparent p-4" placeholder="Your Email" required="required" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <div class="date" id="date" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Select Date" data-target="#date" data-toggle="datetimepicker"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <div class="time" id="time" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Select Time" data-target="#time" data-toggle="datetimepicker"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <select class="custom-select bg-transparent px-4" style="height: 47px;">
-                                        <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 1</option>
-                                        <option value="3">Service 1</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <button class="btn btn-primary btn-block" type="submit" style="height: 47px;">Make Appointment</button>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
@@ -304,82 +243,13 @@
                             <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Saturday : 9:00 AM - 6:00 PM</li>
                             <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Sunday : Closed</li>
                         </ul>
-                        <a href="" class="btn btn-primary mt-2">Book Now</a>
+                        <!-- <a href="" class="btn btn-primary mt-2">Book Now</a> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Open Hours End -->
-
-
-    <!-- Pricing Start -->
-    <div class="container-fluid bg-pricing" style="margin: 90px 0;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5" style="min-height: 500px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="img/pricing.jpg" style="object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-7 pt-5 pb-lg-5">
-                    <div class="pricing-text bg-light p-4 p-lg-5 my-lg-5">
-                        <div class="owl-carousel pricing-carousel">
-                            <div class="bg-white">
-                                <div class="d-flex align-items-center justify-content-between border-bottom border-primary p-4">
-                                    <h1 class="display-4 mb-0">
-                                        <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">$</small>49<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;">/Mo</small>
-                                    </h1>
-                                    <h5 class="text-primary text-uppercase m-0">Basic Plan</h5>
-                                </div>
-                                <div class="p-4">
-                                    <p><i class="fa fa-check text-success mr-2"></i>Full Body Massage</p>
-                                    <p><i class="fa fa-check text-success mr-2"></i>Deep Tissue Massage</p>
-                                    <p><i class="fa fa-check text-success mr-2"></i>Hot Stone Massage</p>
-                                    <p><i class="fa fa-check text-success mr-2"></i>Tissue Body Polish</p>
-                                    <p><i class="fa fa-check text-success mr-2"></i>Foot & Nail Care</p>
-                                    <a href="" class="btn btn-primary my-2">Order Now</a>
-                                </div>
-                            </div>
-                            <div class="bg-white">
-                                <div class="d-flex align-items-center justify-content-between border-bottom border-primary p-4">
-                                    <h1 class="display-4 mb-0">
-                                        <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">$</small>99<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;">/Mo</small>
-                                    </h1>
-                                    <h5 class="text-primary text-uppercase m-0">Family Plan</h5>
-                                </div>
-                                <div class="p-4">
-                                    <p><i class="fa fa-check text-success mr-2"></i>Full Body Massage</p>
-                                    <p><i class="fa fa-check text-success mr-2"></i>Deep Tissue Massage</p>
-                                    <p><i class="fa fa-check text-success mr-2"></i>Hot Stone Massage</p>
-                                    <p><i class="fa fa-check text-success mr-2"></i>Tissue Body Polish</p>
-                                    <p><i class="fa fa-check text-success mr-2"></i>Foot & Nail Care</p>
-                                    <a href="" class="btn btn-primary my-2">Order Now</a>
-                                </div>
-                            </div>
-                            <div class="bg-white">
-                                <div class="d-flex align-items-center justify-content-between border-bottom border-primary p-4">
-                                    <h1 class="display-4 mb-0">
-                                        <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">$</small>149<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;">/Mo</small>
-                                    </h1>
-                                    <h5 class="text-primary text-uppercase m-0">VIP Plan</h5>
-                                </div>
-                                <div class="p-4">
-                                    <p><i class="fa fa-check text-success mr-2"></i>Full Body Massage</p>
-                                    <p><i class="fa fa-check text-success mr-2"></i>Deep Tissue Massage</p>
-                                    <p><i class="fa fa-check text-success mr-2"></i>Hot Stone Massage</p>
-                                    <p><i class="fa fa-check text-success mr-2"></i>Tissue Body Polish</p>
-                                    <p><i class="fa fa-check text-success mr-2"></i>Foot & Nail Care</p>
-                                    <a href="" class="btn btn-primary my-2">Order Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Pricing End -->
 
 
     <!-- Team Start -->
@@ -519,10 +389,10 @@
 
 
     <!-- Footer Start -->
-    <div class="footer container-fluid position-relative bg-dark py-5" style="margin-top: 90px;">
-        <div class="container pt-5">
+    <div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
+        <div class="container">
             <div class="row">
-                <div class="col-lg-6 pr-lg-5 mb-5">
+                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
                     <a href="index.html" class="navbar-brand">
                         <h1 class="mb-3 text-white"><span class="text-primary">AYL</span> Center</h1>
                     </a>
@@ -535,15 +405,7 @@
                         <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a class="btn btn-lg btn-primary btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                    </div> br
                     <p class="m-0 text-white">&copy; <a href="#">AYLBeautySpa</a>. All Rights Reserved.</p>
                 </div>
             </div>
@@ -568,8 +430,8 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
+    <script src="js/jqBootstrapValidation.min.js"></script>
+    <script src="js/contact.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

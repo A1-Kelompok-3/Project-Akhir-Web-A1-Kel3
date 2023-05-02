@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <title>AYL Center - Beauty & Spa</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -19,12 +18,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -65,30 +64,20 @@
     <!-- Navbar Start -->
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
-            <a href="index.php" class="navbar-brand ml-lg-3">
-                <h1 class="m-0 text-primary"><span class="text-dark">SPA</span> Center</h1>
+            <a href="customer.php" class="navbar-brand ml-lg-3">
+                <h1 class="m-0 text-primary"><span class="text-dark">AYL</span> Beauty Spa</h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav m-auto py-0">
-                    <a href="index.php" class="nav-item nav-link active">Home</a>
-                    <a href="about.php" class="nav-item nav-link">About</a>
+                    <a href="customer.php" class="nav-item nav-link active">Home</a>
                     <a href="treatments.php" class="nav-item nav-link">Treatments</a>
-                    <a href="price.php" class="nav-item nav-link">Pricing</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu rounded-0 m-0">
-                            <a href="appointment.php" class="dropdown-item">Appointment</a>
-                            <a href="opening.php" class="dropdown-item">Open Hours</a>
-                            <a href="team.php" class="dropdown-item">Our Team</a>
-                            <a href="testimonials.php" class="dropdown-item">Testimonial</a>
-                        </div>
-                    </div>
+                    <a href="appointment.php" class="nav-item nav-link">Reservation</a>
                     <a href="contact.php" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="" class="btn btn-primary d-none d-lg-block">Book Now</a>
+                <a href="login.php" class="btn btn-primary d-none d-lg-block">Log Out</a>
             </div>
         </nav>
     </div>
@@ -100,9 +89,7 @@
         <div class="container text-center py-5">
             <h3 class="text-white display-3 mb-4">Appointment</h3>
             <div class="d-inline-flex align-items-center text-white">
-                <p class="m-0"><a class="text-white" href="">Home</a></p>
-                <i class="far fa-circle px-3"></i>
-                <p class="m-0">Appointment</p>
+                
             </div>
         </div>
     </div>
@@ -131,7 +118,7 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="email" class="form-control bg-transparent p-4" placeholder="Your Email" required="required" />
+                                        <input type="tel" class="form-control bg-transparent p-4" placeholder="Your Number" required="required" />
                                     </div>
                                 </div>
                             </div>
@@ -139,14 +126,14 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <div class="date" id="date" data-target-input="nearest">
-                                            <input type="text" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Select Date" data-target="#date" data-toggle="datetimepicker"/>
+                                            <input type="date" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Select Date" data-target="#date" data-toggle="datetimepicker"/>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <div class="time" id="time" data-target-input="nearest">
-                                            <input type="text" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Select Time" data-target="#time" data-toggle="datetimepicker"/>
+                                            <input type="time" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Select Time" data-target="#time" data-toggle="datetimepicker"/>
                                         </div>
                                     </div>
                                 </div>
@@ -155,10 +142,11 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <select class="custom-select bg-transparent px-4" style="height: 47px;">
-                                            <option selected>Select A Service</option>
-                                            <option value="1">Service 1</option>
-                                            <option value="2">Service 1</option>
-                                            <option value="3">Service 1</option>
+                                            <option selected>Select Treatment</option>
+                                            <option value="1">Body Massage</option>
+                                            <option value="2">Stone Therapy</option>
+                                            <option value="3">Facial Therapy</option>
+                                            <!-- <option value="4">Facial Therapy</option> -->
                                         </select>
                                     </div>
                                 </div>
@@ -181,7 +169,7 @@
             <div class="row">
                 <div class="col-lg-6" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="img/opening.jpg" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="../img/opening.jpg" style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-6 pt-5 pb-lg-5">
@@ -190,11 +178,10 @@
                         <h1 class="mb-4">Best Relax And Spa Zone</h1>
                         <p>Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd ut. Erat duo eos et erat sed diam duo</p>
                         <ul class="list-inline">
-                            <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Mon – Fri : 9:00 AM - 7:00 PM</li>
-                            <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Saturday : 9:00 AM - 6:00 PM</li>
+                            <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Mon – Fri : 9:00 AM - 8:00 PM</li>
+                            <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Saturday : 9:30 AM - 6:00 PM</li>
                             <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Sunday : Closed</li>
                         </ul>
-                        <a href="" class="btn btn-primary mt-2">Book Now</a>
                     </div>
                 </div>
             </div>
@@ -227,32 +214,10 @@
                         <div class="col-sm-6 mb-5">
                             <h5 class="text-white text-uppercase mb-4">Quick Links</h5>
                             <div class="d-flex flex-column justify-content-start">
-                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
-                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Pricing Plan</a>
-                                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 mb-5">
-                            <h5 class="text-white text-uppercase mb-4">Our Services</h5>
-                            <div class="d-flex flex-column justify-content-start">
-                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Body Massage</a>
-                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Stone Therapy</a>
-                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Facial Therapy</a>
-                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Skin Care</a>
-                                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Nail Care</a>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 mb-5">
-                            <h5 class="text-white text-uppercase mb-4">Newsletter</h5>
-                            <div class="w-100">
-                                <div class="input-group">
-                                    <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-primary px-4">Sign Up</button>
-                                    </div>
-                                </div>
+                                <a class="text-white-50 mb-2" href="customer.php"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                                <a class="text-white-50 mb-2" href="treatments.php#"><i class="fa fa-angle-right mr-2"></i>Treatments</a>
+                                <a class="text-white-50 mb-2" href="appointment.php"><i class="fa fa-angle-right mr-2"></i>Reservation</a>
+                                <a class="text-white-50 mb-2" href="contact.php#"><i class="fa fa-angle-right mr-2"></i>Contact</a>
                             </div>
                         </div>
                     </div>
@@ -288,11 +253,11 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
+    <script src="../js/jqBootstrapValidation.min.js"></script>
+    <script src="../js/contact.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

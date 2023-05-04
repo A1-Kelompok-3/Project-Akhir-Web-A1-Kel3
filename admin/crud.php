@@ -1,9 +1,13 @@
+<?php
+  include('koneksi.php'); //agar index terhubung dengan database, maka koneksi sebagai penghubung harus di include
+  
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>AYL Center - Beauty & Spa</title>
+    <title>CRUD Treatments</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <!-- Favicon -->
@@ -23,6 +27,37 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
+
+     <!-- data tables -->
+     <link rel="stylesheet" type="text/css" href="assets/datatables/datatables.min.css">
+     <script type="text/javascript" src="assets/datatables/datatables.min.js"></script>
+
+     <style type="text/css">
+    
+        table {
+        border: solid 1px #DDEEEE;
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 70%;
+        margin: 10px auto 80px auto;
+        }
+        table thead th {
+            background-color: #DDEFEF;
+            border: solid 1px #DDEEEE;
+            color: #336B6B;
+            padding: 10px;
+            text-align: left;
+            text-shadow: 1px 1px 1px #fff;
+            text-decoration: none;
+        }
+        table tbody td {
+            border: solid 1px #DDEEEE;
+            color: #333;
+            padding: 10px;
+            text-shadow: 1px 1px 1px #fff;
+        }
+
+    </style>
     
 </head>
 
@@ -49,7 +84,61 @@
     </div>
     <!-- Navbar End -->
 
+    <!-- TABLE CRUD Start -->
 
+    <center><h1>Data Treatment</h1><center>
+    <center><a href="tambah_layanan.php">+ &nbsp; Tambah Treatments</a><center>
+    <br/>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Layanan</th>
+          <th>Dekripsi</th>
+          <th>Estimasi</th>
+          <th>Harga</th>
+          <th>Gambar</th>
+          <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+      <?php
+      // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
+      $query = "SELECT * FROM layanan ORDER BY id ASC";
+      $result = mysqli_query($koneksi, $query);
+      //mengecek apakah ada error ketika menjalankan query
+      if(!$result){
+        die ("Query Error: ".mysqli_error($koneksi).
+           " - ".mysqli_error($koneksi));
+      }
+
+      //buat perulangan untuk element tabel dari data mahasiswa
+      $no = 1; //variabel untuk membuat nomor urut
+      // hasil query akan disimpan dalam variabel $data dalam bentuk array
+      // kemudian dicetak dengan perulangan while
+      while($row = mysqli_fetch_assoc($result))
+      {
+      ?>
+       <tr>
+          <td><?php echo $no; ?></td>
+          <td><?php echo $row['treatment']; ?></td>
+          <td><?php echo substr($row['description'], 0, 20); ?>...</td>
+          <td><?php echo $row['estimasi']; ?> menit </td>
+          <td>Rp <?php echo $row['harga']; ?></td>
+          <td style="text-align: center;"><img src="../img/<?php echo $row['gambar']; ?>" style="width: 120px;"></td>
+          <td>
+              <a href="edit_lynn.php?id=<?php echo $row['id']; ?>">Edit</a> |
+              <a href="proses_hapus.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a>
+          </td>
+      </tr>
+         
+      <?php
+        $no++; //untuk nomor urut terus bertambah 1
+      }
+      ?>
+    </tbody>
+    </table>
+    <!-- TABLE CRUD End -->
 
 
 

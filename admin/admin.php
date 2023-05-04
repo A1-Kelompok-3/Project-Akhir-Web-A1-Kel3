@@ -23,12 +23,10 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
-    
+
 </head>
 
 <body>
-
-
 
     <!-- Navbar Start -->
     <div class="container-fluid p-0"> 

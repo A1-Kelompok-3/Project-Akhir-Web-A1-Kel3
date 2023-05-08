@@ -94,7 +94,7 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Spa & Beauty Center</h6>
                             <h3 class="display-3 text-capitalize text-white mb-3">Massage Treatment</h3>
-                            <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum labore diam</p>
+                            <p class="mx-md-5 px-5">Teknik pijat relaksasi yang membantu tubuh terasa dan menjaga peredaran darah di dalam tubuh menjadi lebih lancar.</p>
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Spa & Beauty Center</h6>
                             <h3 class="display-3 text-capitalize text-white mb-3">Facial Treatment</h3>
-                            <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum labore diam</p>
+                            <p class="mx-md-5 px-5">Perawatan wajah dengan menggabungkan 3 fungsi yaitu Mikrodermabrasi, Ultrasound dan Tripolar RF untuk membuat kulit lebih kencang dan segar.</p>
                         </div>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Spa & Beauty Center</h6>
                             <h3 class="display-3 text-capitalize text-white mb-3">Cellulite Treatment</h3>
-                            <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum labore diam</p>
+                            <p class="mx-md-5 px-5">Treatment cellulite diformulasikan membantu menghilangkan bekas selulit di tubuh dan diperkaya dengan bahan aktif sehingga dapat membantu menyamarkan kulit yang berselulit.</p>
                         </div>
                     </div>
                 </div>
@@ -134,7 +134,7 @@
                 <div class="col-lg-6">
                     <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">About Us</h6>
                     <h1 class="mb-4">Your Best Spa, Beauty & Skin Care Center</h1>
-                    <p class="pl-4 border-left border-primary">Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd erat duo eos et erat</p>
+                    <p class="pl-4 border-left border-primary">AYL hadir untuk membantu setiap orang mencapai penampilan terbaiknya melalui perawatan estetika dengan teknologi dan perspektif estetika terkini.</p>
                     <div class="row pt-3">
                         <div class="col-6">
                             <div class="bg-light text-center p-4">
@@ -169,7 +169,7 @@
                 <img class="img-fluid" src="img/service-1.jpg" alt="">
                 <div class="service-text text-center">
                     <h4 class="text-white font-weight-medium px-3">Body Massage</h4>
-                    <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum</p>
+                    <p class="text-white px-3 mb-3">Perawatan tubuh dengan menggunakan bahan-bahan alami untuk menjadikan kulit tubuh menjadi lebih bersih, sehat dan bersinar.</p>
                     <div class="w-100 bg-white text-center p-4" >
                     </div>
                 </div>
@@ -178,7 +178,7 @@
                 <img class="img-fluid" src="img/service-2.jpg" alt="">
                 <div class="service-text text-center">
                     <h4 class="text-white font-weight-medium px-3">Stone Therapy</h4>
-                    <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum</p>
+                    <p class="text-white px-3 mb-3">Stone Theraphy merupakan terapi untuk menyerap energi positif dan mengeluarkan energi negatif dalam tubuh menggunakan batu kristal untuk menjaga keseimbangan jiwa raga dan ketenangan.</p>
                     <div class="w-100 bg-white text-center p-4" >
                     </div>
                 </div>
@@ -187,7 +187,7 @@
                 <img class="img-fluid" src="img/service-3.jpg" alt="">
                 <div class="service-text text-center">
                     <h4 class="text-white font-weight-medium px-3">Facial Therapy</h4>
-                    <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum</p>
+                    <p class="text-white px-3 mb-3">Perpaduan facial dan terapi herbal untuk kulit sensitif guna menyegarkan dan melembabkan kulit wajah. Sehingga menjadikan kulit wajah lebih cerah dan berseri.</p>
                     <div class="w-100 bg-white text-center p-4" >
                     </div>
                 </div>
@@ -196,7 +196,7 @@
                 <img class="img-fluid" src="img/service-4.jpg" alt="">
                 <div class="service-text text-center">
                     <h4 class="text-white font-weight-medium px-3">Skin Care</h4>
-                    <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum</p>
+                    <p class="text-white px-3 mb-3">AYL Beauty and Spa Mempunyai Produk skincare yang akan membuat kulit anda semakin cantik, sehat dan bersinar.</p>
                     <div class="w-100 bg-white text-center p-4" >
                     </div>
                 </div>
@@ -205,7 +205,7 @@
                 <img class="img-fluid" src="img/service-5.jpg" alt="">
                 <div class="service-text text-center">
                     <h4 class="text-white font-weight-medium px-3">Stream Bath</h4>
-                    <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum</p>
+                    <p class="text-white px-3 mb-3">Steam bath diyakini dapat menyehatkan tubuh dengan membuka poripori kulit sehingga dapat menyehatkan dan mempercantik tampilan kulit.</p>
                     <div class="w-100 bg-white text-center p-4" >
                     </div>
                 </div>
@@ -214,7 +214,7 @@
                 <img class="img-fluid" src="img/service-6.jpg" alt="">
                 <div class="service-text text-center">
                     <h4 class="text-white font-weight-medium px-3">Face Masking</h4>
-                    <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum</p>
+                    <p class="text-white px-3 mb-3">Perawatan masker wajah untuk membantu meningkatkan pembetukkan collagen dan menghaluskan permukaan kulit.</p>
                     <div class="w-100 bg-white text-center p-4" >
                     </div>
                 </div>
@@ -237,7 +237,7 @@
                     <div class="hours-text bg-light p-4 p-lg-5 my-lg-5">
                         <h6 class="d-inline-block text-white text-uppercase bg-primary py-1 px-2">Open Hours</h6>
                         <h1 class="mb-4">Best Relax And Spa Zone</h1>
-                        <p>Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd ut. Erat duo eos et erat sed diam duo</p>
+                        <p>AYL Beauty and Spa hadir untuk memberikan perawatan kulit paling efektif dengan teknologi terkini untuk meremajakan, mencerahkan, dan mengembalikan kesehatan kulit anda.</p>
                         <ul class="list-inline">
                             <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Mon – Fri : 9:00 AM - 7:00 PM</li>
                             <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Saturday : 9:00 AM - 6:00 PM</li>

@@ -32,13 +32,17 @@
      <link rel="stylesheet" type="text/css" href="assets/datatables/datatables.min.css">
      <script type="text/javascript" src="assets/datatables/datatables.min.js"></script>
 
+     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css"> -->
+     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+     
+
      <style type="text/css">
     
         table {
         border: solid 1px #DDEEEE;
         border-collapse: collapse;
         border-spacing: 0;
-        width: 70%;
+        width: 100%;
         margin: 10px auto 80px auto;
         }
         table thead th {
@@ -89,55 +93,57 @@
     <center><h1>Data Treatment</h1><center>
     <center><a href="tambah_layanan.php">+ &nbsp; Tambah Treatments</a><center>
     <br/>
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Layanan</th>
-          <th>Dekripsi</th>
-          <th>Estimasi</th>
-          <th>Harga</th>
-          <th>Gambar</th>
-          <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-      <?php
-      // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
-      $query = "SELECT * FROM layanan ORDER BY id ASC";
-      $result = mysqli_query($koneksi, $query);
-      //mengecek apakah ada error ketika menjalankan query
-      if(!$result){
-        die ("Query Error: ".mysqli_error($koneksi).
-           " - ".mysqli_error($koneksi));
-      }
+    <div class="container">
+        <table id='example'>
+        <thead>
+            <tr>
+            <th>ID</th>
+            <th>Layanan</th>
+            <th>Dekripsi</th>
+            <th>Estimasi</th>
+            <th>Harga</th>
+            <th>Gambar</th>
+            <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php
+        // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
+        $query = "SELECT * FROM layanan ORDER BY id ASC";
+        $result = mysqli_query($koneksi, $query);
+        //mengecek apakah ada error ketika menjalankan query
+        if(!$result){
+            die ("Query Error: ".mysqli_error($koneksi).
+            " - ".mysqli_error($koneksi));
+        }
 
-      //buat perulangan untuk element tabel dari data mahasiswa
-      $no = 1; //variabel untuk membuat nomor urut
-      // hasil query akan disimpan dalam variabel $data dalam bentuk array
-      // kemudian dicetak dengan perulangan while
-      while($row = mysqli_fetch_assoc($result))
-      {
-      ?>
-       <tr>
-          <td><?php echo $no; ?></td>
-          <td><?php echo $row['treatment']; ?></td>
-          <td><?php echo substr($row['description'], 0, 20); ?>...</td>
-          <td><?php echo $row['estimasi']; ?> menit </td>
-          <td>Rp <?php echo $row['harga']; ?></td>
-          <td style="text-align: center;"><img src="../img/<?php echo $row['gambar']; ?>" style="width: 120px;"></td>
-          <td>
-              <a href="edit_lynn.php?id=<?php echo $row['id']; ?>">Edit</a> |
-              <a href="proses_hapus.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a>
-          </td>
-      </tr>
-         
-      <?php
-        $no++; //untuk nomor urut terus bertambah 1
-      }
-      ?>
-    </tbody>
-    </table>
+        //buat perulangan untuk element tabel dari data mahasiswa
+        $no = 1; //variabel untuk membuat nomor urut
+        // hasil query akan disimpan dalam variabel $data dalam bentuk array
+        // kemudian dicetak dengan perulangan while
+        while($row = mysqli_fetch_assoc($result))
+        {
+        ?>
+        <tr>
+            <td><?php echo $no; ?></td>
+            <td><?php echo $row['treatment']; ?></td>
+            <td><?php echo substr($row['description'], 0, 20); ?>...</td>
+            <td><?php echo $row['estimasi']; ?> menit </td>
+            <td>Rp <?php echo $row['harga']; ?></td>
+            <td style="text-align: center;"><img src="../img/<?php echo $row['gambar']; ?>" style="width: 120px;"></td>
+            <td>
+                <a href="edit_lynn.php?id=<?php echo $row['id']; ?>">Edit</a> |
+                <a href="proses_hapus.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a>
+            </td>
+        </tr>
+            
+        <?php
+            $no++; //untuk nomor urut terus bertambah 1
+        }
+        ?>
+        </tbody>
+        </table>
+    </div>
     <!-- TABLE CRUD End -->
 
 
@@ -176,6 +182,16 @@
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+    $('#example').DataTable();
+});
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+
 </body>
 
 </html>

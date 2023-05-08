@@ -99,7 +99,7 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Spa & Beauty Center</h6>
                             <h3 class="display-3 text-capitalize text-white mb-3">Massage Treatment</h3>
-                            <p class="mx-md-5 px-5">Teknik pijat relaksasi yang membantu tubuh terasa dan menjaga peredaran darah di dalam tubuh menjadi lebih lancar.</p>
+                            <p class="mx-md-5 px-5">Teknik pijat relaksasi yang membantu tubuh terasa lebih nyaman dan menjaga peredaran darah di dalam tubuh menjadi lebih lancar.</p>
                             <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="appointment.php">Make Appointment</a>
                         </div>
                     </div>

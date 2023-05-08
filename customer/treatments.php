@@ -105,7 +105,7 @@
                 <img class="img-fluid" src="../img/service-1.jpg" alt="">
                 <div class="service-text text-center">
                     <h4 class="text-white font-weight-medium px-3">Body Massage</h4>
-                    <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum</p>
+                    <p class="text-white px-3 mb-3">Perawatan tubuh dengan menggunakan bahan-bahan alami untuk menjadikan kulit tubuh menjadi lebih bersih, sehat dan bersinar.</p>
                     <div class="w-100 bg-white text-center p-4" >
                     </div>
                 </div>
@@ -114,7 +114,7 @@
                 <img class="img-fluid" src="../img/service-2.jpg" alt="">
                 <div class="service-text text-center">
                     <h4 class="text-white font-weight-medium px-3">Stone Therapy</h4>
-                    <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum</p>
+                    <p class="text-white px-3 mb-3">Stone Theraphy merupakan terapi untuk menyerap energi positif dan mengeluarkan energi negatif dalam tubuh menggunakan batu kristal untuk menjaga keseimbangan jiwa raga dan ketenangan.</p>
                     <div class="w-100 bg-white text-center p-4" >
                     </div>
                 </div>
@@ -123,7 +123,7 @@
                 <img class="img-fluid" src="../img/service-3.jpg" alt="">
                 <div class="service-text text-center">
                     <h4 class="text-white font-weight-medium px-3">Facial Therapy</h4>
-                    <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum</p>
+                    <p class="text-white px-3 mb-3">Perpaduan facial dan terapi herbal untuk kulit sensitif guna menyegarkan dan melembabkan kulit wajah. Sehingga menjadikan kulit wajah lebih cerah dan berseri.</p>
                     <div class="w-100 bg-white text-center p-4" >
                     </div>
                 </div>
@@ -132,7 +132,7 @@
                 <img class="img-fluid" src="../img/service-4.jpg" alt="">
                 <div class="service-text text-center">
                     <h4 class="text-white font-weight-medium px-3">Skin Care</h4>
-                    <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum</p>
+                    <p class="text-white px-3 mb-3">AYL Beauty and Spa Mempunyai Produk skincare yang akan membuat kulit anda semakin cantik, sehat dan bersinar.</p>
                     <div class="w-100 bg-white text-center p-4" >
                     </div>
                 </div>
@@ -141,7 +141,7 @@
                 <img class="img-fluid" src="../img/service-5.jpg" alt="">
                 <div class="service-text text-center">
                     <h4 class="text-white font-weight-medium px-3">Stream Bath</h4>
-                    <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum</p>
+                    <p class="text-white px-3 mb-3">Steam bath diyakini dapat menyehatkan tubuh dengan membuka poripori kulit sehingga dapat menyehatkan dan mempercantik tampilan kulit.</p>
                     <div class="w-100 bg-white text-center p-4" >
                     </div>
                 </div>
@@ -150,7 +150,7 @@
                 <img class="img-fluid" src="../img/service-6.jpg" alt="">
                 <div class="service-text text-center">
                     <h4 class="text-white font-weight-medium px-3">Face Masking</h4>
-                    <p class="text-white px-3 mb-3">Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor duo sit ipsum</p>
+                    <p class="text-white px-3 mb-3">Perawatan masker wajah untuk membantu meningkatkan pembetukkan collagen dan menghaluskan permukaan kulit.</p>
                     <div class="w-100 bg-white text-center p-4" >
                     <a class="btn btn-primary" href="">Make Order</a>
                     </div>

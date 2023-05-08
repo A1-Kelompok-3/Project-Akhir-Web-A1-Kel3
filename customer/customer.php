@@ -99,7 +99,7 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Spa & Beauty Center</h6>
                             <h3 class="display-3 text-capitalize text-white mb-3">Massage Treatment</h3>
-                            <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum labore diam</p>
+                            <p class="mx-md-5 px-5">Teknik pijat relaksasi yang membantu tubuh terasa dan menjaga peredaran darah di dalam tubuh menjadi lebih lancar.</p>
                             <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="appointment.php">Make Appointment</a>
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Spa & Beauty Center</h6>
                             <h3 class="display-3 text-capitalize text-white mb-3">Facial Treatment</h3>
-                            <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum labore diam</p>
+                            <p class="mx-md-5 px-5">Perawatan wajah dengan menggabungkan 3 fungsi yaitu Mikrodermabrasi, Ultrasound dan Tripolar RF untuk membuat kulit lebih kencang dan segar.</p>
                             <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="appointment.php">Make Appointment</a>
                         </div>
                     </div>
@@ -121,7 +121,7 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Spa & Beauty Center</h6>
                             <h3 class="display-3 text-capitalize text-white mb-3">Cellulite Treatment</h3>
-                            <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum labore diam</p>
+                            <p class="mx-md-5 px-5">Treatment cellulite diformulasikan membantu menghilangkan bekas selulit di tubuh dan diperkaya dengan bahan aktif sehingga dapat membantu menyamarkan kulit yang berselulit.</p>
                             <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="appointment.php">Make Appointment</a>
                         </div>
                     </div>
@@ -142,7 +142,7 @@
                 <div class="col-lg-6">
                     <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">About Us</h6>
                     <h1 class="mb-4">Your Best Spa, Beauty & Skin Care Center</h1>
-                    <p class="pl-4 border-left border-primary">Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd erat duo eos et erat</p>
+                    <p class="pl-4 border-left border-primary">AYL hadir untuk membantu setiap orang mencapai penampilan terbaiknya melalui perawatan estetika dengan teknologi dan perspektif estetika terkini.</p>
                     <div class="row pt-3">
                         <div class="col-6">
                             <div class="bg-light text-center p-4">

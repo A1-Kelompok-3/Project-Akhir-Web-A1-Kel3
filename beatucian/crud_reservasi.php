@@ -70,7 +70,7 @@
     <!-- Navbar Start -->
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
-            <a href="admin.php" class="navbar-brand ml-lg-3">
+            <a href="beatucian.php" class="navbar-brand ml-lg-3">
                 <h1 class="m-0 text-primary"><span class="text-dark">AYL</span> Beauty Spa</h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -78,9 +78,8 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav m-auto py-0">
-                    <a href="admin.php" class="nav-item nav-link active">Home</a>
-                    <a href="crud.php" class="nav-item nav-link">Treatments</a>
-                    <a href="show.php" class="nav-item nav-link">Reservation</a>
+                    <a href="beatucian.php" class="nav-item nav-link active">Home</a>
+                    <a href="crud_reservasi.php" class="nav-item nav-link">Reservation</a>
                 </div>
                 <a href="login.php" class="btn btn-primary d-none d-lg-block">Log Out</a>
             </div>
@@ -90,26 +89,24 @@
 
     <!-- TABLE CRUD Start -->
 
-    <center><h1>Data Treatment</h1><center>
-    <center><a href="tambah_layanan.php">+ &nbsp; Tambah Treatments</a><center>
-    <br/>
+    <center><h1>Data Reservasi</h1><center>
     <div class="container">
         <table id='example'>
         <thead>
             <tr>
             <th>ID</th>
-            <th>Layanan</th>
-            <th>Dekripsi</th>
-            <th>Estimasi</th>
-            <th>Harga</th>
-            <th>Gambar</th>
+            <th>Tanggal</th>
+            <th>Waktu</th>
+            <th>Nama</th>
+            <th>No HP</th>
+            <th>Treatment</th>
             <th>Action</th>
             </tr>
         </thead>
         <tbody>
         <?php
         // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
-        $query = "SELECT * FROM layanan ORDER BY id ASC";
+        $query = "SELECT * FROM reservasi ORDER BY kode_reservasi ASC";
         $result = mysqli_query($koneksi, $query);
         //mengecek apakah ada error ketika menjalankan query
         if(!$result){
@@ -126,14 +123,15 @@
         ?>
         <tr>
             <td><?php echo $no; ?></td>
-            <td><?php echo $row['treatment']; ?></td>
-            <td><?php echo substr($row['description'], 0, 20); ?>...</td>
-            <td><?php echo $row['estimasi']; ?> menit </td>
-            <td>Rp <?php echo $row['harga']; ?></td>
-            <td style="text-align: center;"><img src="../img/<?php echo $row['gambar']; ?>" style="width: 120px;"></td>
+            <td><?php echo $row['Tanggal']; ?></td>
+            <td><?php echo $row['Waktu']; ?></td>
+            <td><?php echo $row['Nama']; ?></td>
+            <td><?php echo $row['No HP']; ?></td>
+            <td><?php echo $row['Treatment']; ?></td>
             <td>
-                <a href="edit_lynn.php?id=<?php echo $row['id']; ?>">Edit</a> |
-                <a href="proses_hapus.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a>
+                <!-- <a href="edit_lynn.php?id=<?php echo $row['id']; ?>">Edit</a> | -->
+                <a href="proses_hapus.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a> |
+                <a href="selesai.php?id=<?php echo $row['id']; ?>">Selesai</a>
             </td>
         </tr>
             

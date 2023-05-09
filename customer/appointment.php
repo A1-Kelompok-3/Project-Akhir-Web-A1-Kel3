@@ -72,10 +72,10 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav m-auto py-0">
-                    <a href="customer.php" class="nav-item nav-link active">Home</a>
-                    <a href="treatments.php" class="nav-item nav-link">Treatments</a>
-                    <a href="appointment.php" class="nav-item nav-link">Reservation</a>
-                    <a href="contact.php" class="nav-item nav-link">Contact</a>
+                    <a href="customer.php" class="nav-item nav-link active">Beranda</a>
+                    <a href="treatments.php" class="nav-item nav-link">Layanan</a>
+                    <a href="appointment.php" class="nav-item nav-link">Reservasi</a>
+                    <a href="contact.php" class="nav-item nav-link">Kontak Kami</a>
                 </div>
                 <a href="login.php" class="btn btn-primary d-none d-lg-block">Log Out</a>
             </div>
@@ -87,7 +87,7 @@
     <!-- Header Start -->
     <div class="jumbotron jumbotron-fluid bg-jumbotron" style="margin-bottom: 90px;">
         <div class="container text-center py-5">
-            <h3 class="text-white display-3 mb-4">Appointment</h3>
+            <h3 class="text-white display-3 mb-4">Reservasi</h3>
             <div class="d-inline-flex align-items-center text-white">
                 
             </div>
@@ -101,14 +101,14 @@
         <div class="container py-5">
             <div class="row mx-0 justify-content-center text-center">
                 <div class="col-lg-6">
-                    <h6 class="d-inline-block bg-light text-primary text-uppercase py-1 px-2">Appointment</h6>
-                    <h1 class="mb-5">Make An Appointment</h1>
+                    <h6 class="d-inline-block bg-light text-primary text-uppercase py-1 px-2">Reservasi</h6>
+                    <h1 class="mb-5">Buat Reservasi</h1>
                 </div>
             </div>
             <div class="row justify-content-center bg-appointment mx-0">
                 <div class="col-lg-6 py-5">
                     <div class="p-5 my-5" style="background: rgba(33, 30, 28, 0.7);">
-                        <h1 class="text-white text-center mb-4">Make Appointment</h1>
+                        <h1 class="text-white text-center mb-4">Buat Reservasi</h1>
                         <form>
                             <div class="form-row">
                                 <div class="col-sm-6">
@@ -142,10 +142,13 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <select class="custom-select bg-transparent px-4" style="height: 47px;">
-                                            <option selected>Select Treatment</option>
+                                            <option selected>Pilih Reservasi</option>
                                             <option value="1">Body Massage</option>
                                             <option value="2">Stone Therapy</option>
                                             <option value="3">Facial Therapy</option>
+                                            <option value="3">Skin Care</option>
+                                            <option value="3">Stream Bath</option>
+                                            <option value="3">Face Masking</option>
                                             <!-- <option value="4">Facial Therapy</option> -->
                                         </select>
                                     </div>
@@ -174,13 +177,13 @@
                 </div>
                 <div class="col-lg-6 pt-5 pb-lg-5">
                     <div class="hours-text bg-light p-4 p-lg-5 my-lg-5">
-                        <h6 class="d-inline-block text-white text-uppercase bg-primary py-1 px-2">Open Hours</h6>
+                        <h6 class="d-inline-block text-white text-uppercase bg-primary py-1 px-2">Jam Kerja</h6>
                         <h1 class="mb-4">Best Relax And Spa</h1>
                         <p>Temukan waktu yang tepat untuk bersantai dan meremajakan diri dengan jadwal spa kami yang fleksibel</p>
                         <ul class="list-inline">
-                            <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Mon – Fri : 9:00 AM - 8:00 PM</li>
-                            <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Saturday : 9:30 AM - 6:00 PM</li>
-                            <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Sunday : Closed</li>
+                            <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Senin – Jumat : 9:00 AM - 8:00 PM</li>
+                            <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Sabtu : 9:30 AM - 6:00 PM</li>
+                            <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Minggu : Tutup</li>
                         </ul>
                     </div>
                 </div>

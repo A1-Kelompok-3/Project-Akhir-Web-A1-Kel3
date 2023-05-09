@@ -29,7 +29,7 @@
       text-align: left;
       width: 100%;
     }
-    input {
+    input, textarea {
       padding: 6px;
       width: 100%;
       box-sizing: border-box;
@@ -58,24 +58,25 @@
       <form method="POST" action="proses_tambah.php" enctype="multipart/form-data" >
       <section class="base">
         <div>
-          <label>Treatment</label>
-          <input type="text" name="treatment" autofocus="" required="" />
+          <label>Layanan</label>
+          <input type="text" name="treatment" autofocus="" required autocomplete="off" />
         </div>
         <div>
-          <label>Description</label>
-         <input type="text" name="description" />
+          <label>Deskripsi</label>
+          <textarea name="description" id="" cols="54" rows="5" required autocomplete="off"></textarea>
+         <!-- <input type="textarea" name="description" cols="12" rows="5" required autocomplete="off"/> -->
         </div>
         <div>
           <label>Estimasi</label>
-         <input type="number" name="estimasi" min="0" step="1" required="" />
+         <input type="number" name="estimasi" min="0" step="1" required autocomplete="off" />
         </div>
         <div>
           <label>Harga</label>
-         <input type="text" name="harga" required="" />
+         <input type="text" name="harga" required autocomplete="off" />
         </div>
         <div>
           <label>Gambar</label>
-         <input type="file" name="gambar" required="" />
+         <input type="file" name="gambar" required autocomplete="off" />
         </div>
         <div>
          <button type="submit">Simpan Treatment</button>

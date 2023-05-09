@@ -1,14 +1,11 @@
-<?php 
+<?php
+  $host = "localhost"; 
+  $user = "root";
+  $pass = "";
+  $nama_db = "spa_db"; //nama database
+  $koneksi = mysqli_connect($host,$user,$pass,$nama_db); //pastikan urutan nya seperti ini, jangan tertukar
 
-$sName = "localhost";
-$uName = "root";
-$pass = "";
-$db_name = "spa_db";
-
-try {
-    $conn = new PDO("mysql:host=$sName;dbname=$db_name", 
-                    $uName, $pass);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}catch(PDOException $e){
-  echo "Connection failed : ". $e->getMessage();
-}
+  if(!$koneksi){ //jika tidak terkoneksi maka akan tampil error
+    die ("Koneksi dengan database gagal: ".mysql_connect_error());
+  }
+?>

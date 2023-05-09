@@ -39,9 +39,9 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav m-auto py-0">
-                    <a href="admin.php" class="nav-item nav-link active">Home</a>
-                    <a href="crud.php" class="nav-item nav-link">Treatments</a>
-                    <a href="show.php" class="nav-item nav-link">Reservation</a>
+                    <a href="admin.php" class="nav-item nav-link active">Beranda</a>
+                    <a href="crud.php" class="nav-item nav-link">Layanan</a>
+                    <a href="show.php" class="nav-item nav-link">Reservasi</a>
                 </div>
                 <a href="login.php" class="btn btn-primary d-none d-lg-block">Log Out</a>
             </div>

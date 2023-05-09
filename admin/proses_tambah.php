@@ -30,7 +30,7 @@ if($gambar != "") {
                   } else {
                     //tampil alert dan akan redirect ke halaman index.php
                     //silahkan ganti index.php sesuai halaman yang akan dituju
-                    echo "<script>alert('Data berhasil ditambah.');window.location='index.php';</script>";
+                    echo "<script>alert('Data berhasil ditambah.');window.location='crud.php';</script>";
                   }
 
             } else {     
@@ -47,7 +47,7 @@ if($gambar != "") {
                   } else {
                     //tampil alert dan akan redirect ke halaman index.php
                     //silahkan ganti index.php sesuai halaman yang akan dituju
-                    echo "<script>alert('Data berhasil ditambah.');window.location='index.php';</script>";
+                    echo "<script>alert('Data berhasil ditambah.');window.location='crud.php';</script>";
                   }
 }
 

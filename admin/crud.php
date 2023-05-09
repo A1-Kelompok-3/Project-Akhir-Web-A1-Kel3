@@ -1,5 +1,5 @@
 <?php
-  include('koneksi.php'); //agar index terhubung dengan database, maka koneksi sebagai penghubung harus di include
+  include('../php/conn.php'); //agar index terhubung dengan database, maka koneksi sebagai penghubung harus di include
   
 ?>
 <!DOCTYPE html>
@@ -78,9 +78,9 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav m-auto py-0">
-                    <a href="admin.php" class="nav-item nav-link active">Home</a>
-                    <a href="crud.php" class="nav-item nav-link">Treatments</a>
-                    <a href="show.php" class="nav-item nav-link">Reservation</a>
+                    <a href="admin.php" class="nav-item nav-link active">Beranda</a>
+                    <a href="crud.php" class="nav-item nav-link">Layanan</a>
+                    <a href="show.php" class="nav-item nav-link">Reservasi</a>
                 </div>
                 <a href="login.php" class="btn btn-primary d-none d-lg-block">Log Out</a>
             </div>
@@ -127,13 +127,13 @@
         <tr>
             <td><?php echo $no; ?></td>
             <td><?php echo $row['treatment']; ?></td>
-            <td><?php echo substr($row['description'], 0, 20); ?>...</td>
+            <td><?php echo $row['description']; ?></td>
             <td><?php echo $row['estimasi']; ?> menit </td>
             <td>Rp <?php echo $row['harga']; ?></td>
             <td style="text-align: center;"><img src="../img/<?php echo $row['gambar']; ?>" style="width: 120px;"></td>
             <td>
-                <a href="edit_lynn.php?id=<?php echo $row['id']; ?>">Edit</a> |
-                <a href="proses_hapus.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a>
+                <a href="edit_lynn.php?id=<?php echo $row['id']; ?>"><img src="../img/ubah.png" alt=""></a> |
+                <a href="proses_hapus.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')"><img src="../img/hapus.png" alt=""></a>
             </td>
         </tr>
             

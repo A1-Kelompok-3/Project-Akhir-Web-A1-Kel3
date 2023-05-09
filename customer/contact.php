@@ -71,10 +71,10 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav m-auto py-0">
-                    <a href="customer.php" class="nav-item nav-link active">Home</a>
-                    <a href="treatments.php" class="nav-item nav-link">Treatments</a>
-                    <a href="appointment.php" class="nav-item nav-link">Reservation</a>
-                    <a href="contact.php" class="nav-item nav-link">Contact</a>
+                    <a href="customer.php" class="nav-item nav-link active">Beranda</a>
+                    <a href="treatments.php" class="nav-item nav-link">Layanan</a>
+                    <a href="appointment.php" class="nav-item nav-link">Reservasi</a>
+                    <a href="contact.php" class="nav-item nav-link">Kontak Kami</a>
                 </div>
                 <a href="login.php" class="btn btn-primary d-none d-lg-block">Log Out</a>
             </div>
@@ -86,7 +86,7 @@
     <!-- Header Start -->
     <div class="jumbotron jumbotron-fluid bg-jumbotron" style="margin-bottom: 90px;">
         <div class="container text-center py-5">
-            <h3 class="text-white display-3 mb-4">Contact</h3>
+            <h3 class="text-white display-3 mb-4">Kontak Kami</h3>
             <div class="d-inline-flex align-items-center text-white">
                
             </div>
@@ -106,8 +106,8 @@
                 </div>
                 <div class="col-lg-6 pt-5 pb-lg-5">
                     <div class="contact-form bg-light p-4 p-lg-5 my-lg-5">
-                        <h6 class="d-inline-block text-white text-uppercase bg-primary py-1 px-2">Contact</h6>
-                        <h1 class="mb-4">Contact For Any Query</h1>
+                        <h6 class="d-inline-block text-white text-uppercase bg-primary py-1 px-2">Kotak Kami</h6>
+                        <h1 class="mb-4">Tanyakan Pertanyaan Anda</h1>
                         <div id="success"></div>
                         <form name="sentMessage" id="contactForm" novalidate="novalidate">
                         

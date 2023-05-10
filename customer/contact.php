@@ -76,7 +76,7 @@
                     <a href="appointment.php" class="nav-item nav-link">Reservasi</a>
                     <a href="contact.php" class="nav-item nav-link">Kontak Kami</a>
                 </div>
-                <a href="login.php" class="btn btn-primary d-none d-lg-block">Log Out</a>
+                <a href="../index.php" class="btn btn-primary d-none d-lg-block">Keluar</a>
             </div>
         </nav>
     </div>

@@ -1,5 +1,5 @@
 <?php
-  include('koneksi.php'); //agar index terhubung dengan database, maka koneksi sebagai penghubung harus di include
+  include('../php/conn.php'); //agar index terhubung dengan database, maka koneksi sebagai penghubung harus di include
   
 ?>
 <!DOCTYPE html>
@@ -64,7 +64,6 @@
         <div>
           <label>Deskripsi</label>
           <textarea name="description" id="" cols="54" rows="5" required autocomplete="off"></textarea>
-         <!-- <input type="textarea" name="description" cols="12" rows="5" required autocomplete="off"/> -->
         </div>
         <div>
           <label>Estimasi</label>

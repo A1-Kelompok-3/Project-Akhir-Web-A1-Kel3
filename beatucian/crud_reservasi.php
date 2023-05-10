@@ -1,5 +1,5 @@
 <?php
-  include('koneksi.php'); //agar index terhubung dengan database, maka koneksi sebagai penghubung harus di include
+  include('../php/conn.php'); //agar index terhubung dengan database, maka koneksi sebagai penghubung harus di include
   
 ?>
 <!DOCTYPE html>
@@ -81,7 +81,7 @@
                     <a href="beatucian.php" class="nav-item nav-link active">Beranda</a>
                     <a href="crud_reservasi.php" class="nav-item nav-link">Reservasi</a>
                 </div>
-                <a href="login.php" class="btn btn-primary d-none d-lg-block">Log Out</a>
+                <a href="../index.php" class="btn btn-primary d-none d-lg-block">Keluar</a>
             </div>
         </nav>
     </div>

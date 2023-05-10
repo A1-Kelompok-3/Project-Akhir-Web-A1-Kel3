@@ -82,7 +82,7 @@
                     <a href="crud.php" class="nav-item nav-link">Layanan</a>
                     <a href="show.php" class="nav-item nav-link">Reservasi</a>
                 </div>
-                <a href="login.php" class="btn btn-primary d-none d-lg-block">Log Out</a>
+                <a href="../index.php" class="btn btn-primary d-none d-lg-block">Keluar</a>
             </div>
         </nav>
     </div>

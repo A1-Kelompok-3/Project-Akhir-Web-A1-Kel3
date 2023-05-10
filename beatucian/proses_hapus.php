@@ -1,5 +1,5 @@
 <?php
-include 'koneksi.php';
+include '../php/conn.php';
 $id = $_GET["id"];
 //mengambil id yang ingin dihapus
 

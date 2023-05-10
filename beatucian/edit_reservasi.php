@@ -1,6 +1,6 @@
 <?php
   // memanggil file koneksi.php untuk membuat koneksi
-include 'koneksi.php';
+include '../php/conn.php';
 
   // mengecek apakah di url ada nilai GET id
   if (isset($_GET['kode_reservasi'])) {

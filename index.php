@@ -20,6 +20,7 @@
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -72,13 +73,108 @@
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav m-auto py-0">
                 </div>
-                <a href="../customer/customer.php" class="btn btn-primary d-none d-lg-block">Log In</a>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary d-none d-lg-block" data-toggle="modal" data-target="#exampleModall">Masuk</button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary d-none d-lg-block" data-toggle="modal" data-target="#exampleModal">Daftar</button>
             </div>
         </nav>
     </div>
     <!-- Navbar End -->
 
 
+<!-- Modal Login -->
+<div class="modal fade" id="exampleModall" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        </form>
+        <section class="login">
+                <form class="shadow w-450 p-3" 
+                    action="php/login.php" 
+                    method="post">
+                    <center>
+                    <h4>Masuk</h4><br>
+                    </center>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="text" class="form-control" name="uname" required autocomplete="off">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" name="pass" required autocomplete="off">
+                    
+                    <div class="mb-3">
+                        <label>Masuk Sebagi :
+                        <select name="role">
+                            <option value="customer">Custumer</option>
+                            <option value="admin">Admin</option>
+                            <option value="beatucian">Beatucian</option><br><br>
+                        </select>
+                        </label>
+                    </div>
+                    <div>
+                        <center>
+                            <button type="button" class="btn btn-primary">Masuk</button>
+                        </center>
+                    </div>
+                    </div> 
+                </form>
+	    </section>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    
+<!-- Modal SignUp -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        </form>
+        <section class="login">
+                <form class="shadow w-450 p-3" 
+                    action="php/login.php" 
+                    method="post">
+                    <center>
+                    <h4>Buat Akun</h4><br>
+                    </center>
+                    <div class="mb-3">
+                        <label class="form-label">Nama Lengkap</label>
+                        <input type="text" class="form-control" name="uname" required autocomplete="off">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" name="uname" required autocomplete="off">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" name="pass" required autocomplete="off">
+                    </div>
+                    <div>
+                        <center>
+                            <button type="button" class="btn btn-primary">Daftar</button>
+                        </center>
+                    </div>
+                </form>
+	    </section>
+      </div>
+      
+    </div>
+  </div>
+</div>
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5 pb-5">
         <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
@@ -138,13 +234,13 @@
                     <div class="row pt-3">
                         <div class="col-6">
                             <div class="bg-light text-center p-4">
-                                <h3 class="display-4 text-primary" data-toggle="counter-up">99</h3>
+                                <h3 class="display-4 text-primary" data-toggle="counter-up">10</h3>
                                 <h6 class="text-uppercase">Spa Specialist</h6>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="bg-light text-center p-4">
-                                <h3 class="display-4 text-primary" data-toggle="counter-up">999</h3>
+                                <h3 class="display-4 text-primary" data-toggle="counter-up">300</h3>
                                 <h6 class="text-uppercase">Happy Clients</h6>
                             </div>
                         </div>
@@ -363,6 +459,8 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 
     <!-- Contact Javascript File -->
     <script src="js/jqBootstrapValidation.min.js"></script>
@@ -370,6 +468,13 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+    </script>
+    
 </body>
 
 </html>

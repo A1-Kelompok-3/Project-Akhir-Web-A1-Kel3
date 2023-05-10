@@ -1,6 +1,6 @@
 <?php
 // memanggil file koneksi.php untuk melakukan koneksi database
-include 'koneksi.php';
+include '../php/conn.php';
 
 	// membuat variabel untuk menampung data dari form
   $id = $_POST['id'];

@@ -7,7 +7,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>CRUD Treatments</title>
+    <title>AYL Center - Beauty & Spa</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <!-- Favicon -->
@@ -123,15 +123,15 @@
         ?>
         <tr>
             <td><?php echo $no; ?></td>
-            <td><?php echo $row['Tanggal']; ?></td>
-            <td><?php echo $row['Waktu']; ?></td>
-            <td><?php echo $row['Nama']; ?></td>
-            <td><?php echo $row['No HP']; ?></td>
-            <td><?php echo $row['Treatment']; ?></td>
+            <td><?php echo $row['nama']; ?></td>
+            <td><?php echo $row['no_hp']; ?></td>
+            <td><?php echo $row['tanggal']; ?></td>
+            <td><?php echo $row['waktu']; ?></td>
+            <td><?php echo $row['treatment']; ?></td>
             <td>
-                <!-- <a href="edit_lynn.php?id=<?php echo $row['id']; ?>">Edit</a> | -->
-                <a href="proses_hapus.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a> |
-                <a href="selesai.php?id=<?php echo $row['id']; ?>">Selesai</a>
+
+                <a href="proses_hapus.php?kode_reservasi=<?php echo $row['kode_reservasi']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a> |
+                <a href="selesai.php?kode_reservasi=<?php echo $row['kode_reservasi']; ?>" onclick="return confirm('Apakah Reservasi ini Telah Selesai?')" class="btn btn-primary btn-sm">Selesai</a>
             </td>
         </tr>
             
@@ -146,17 +146,10 @@
 
 
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-                    <p class="m-0 text-white">&copy; <a href="#">AYLBeautySpa</a>. All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
+    <?php
+    // Memanggil footer
+    include ('../fh/footer.php');
+    ?>
 
 
     <!-- Back to Top -->

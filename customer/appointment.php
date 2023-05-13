@@ -27,38 +27,11 @@
 </head>
 
 <body>
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-light d-none d-lg-block">
-        <div class="row py-2 px-lg-5">
-            <div class="col-lg-6 text-left mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center">
-                    <small><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</small>
-                    <small class="px-3">|</small>
-                    <small><i class="fa fa-envelope mr-2"></i>AYLBeautySpa@gmail.com</small>
-                </div>
-            </div>
-            <div class="col-lg-6 text-right">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-primary px-2" href="">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="text-primary px-2" href="">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="text-primary px-2" href="">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a class="text-primary px-2" href="">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-primary pl-2" href="">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
+
+    <?php
+    // Memanggil topbar
+    include ('../fh/header.php');
+    ?>
 
 
     <!-- Navbar Start -->
@@ -109,52 +82,57 @@
                 <div class="col-lg-6 py-5">
                     <div class="p-5 my-5" style="background: rgba(33, 30, 28, 0.7);">
                         <h1 class="text-white text-center mb-4">Buat Reservasi</h1>
-                        <form>
+                        <form method="POST" action="proses_reservasi.php" enctype="multipart/form-data" >
+                        <section class="base">
+                            
                             <div class="form-row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control bg-transparent p-4" placeholder="Your Name" required="required" />
+                                        <input type="text" class="form-control bg-transparent p-4" placeholder="Your Name" id= "nama" name="nama" autofocus="" required="required" />
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="tel" class="form-control bg-transparent p-4" placeholder="Your Number" required="required" />
+                                        <input type="tel" class="form-control bg-transparent p-4" placeholder="Your Number" id= "no_hp" name="no_hp" autofocus="" required="required" />
                                     </div>
                                 </div>
                             </div>
+
                             <div class="form-row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <div class="date" id="date" data-target-input="nearest">
-                                            <input type="date" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Select Date" data-target="#date" data-toggle="datetimepicker"/>
+                                            <input type="date" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Select Date" id= "tanggal" name="tanggal" autofocus="" data-target="#date" data-toggle="datetimepicker"/>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <div class="time" id="time" data-target-input="nearest">
-                                            <input type="time" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Select Time" data-target="#time" data-toggle="datetimepicker"/>
+                                            <input type="time" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Select Time" data-target="#time" id= "waktu" name="waktu" autofocus="" data-toggle="datetimepicker"/>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="form-row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <select class="custom-select bg-transparent px-4" style="height: 47px;">
-                                            <option selected>Pilih Reservasi</option>
-                                            <option value="1">Body Massage</option>
-                                            <option value="2">Stone Therapy</option>
-                                            <option value="3">Facial Therapy</option>
-                                            <option value="3">Skin Care</option>
-                                            <option value="3">Stream Bath</option>
-                                            <option value="3">Face Masking</option>
-                                            <!-- <option value="4">Facial Therapy</option> -->
+                                        <select class="custom-select bg-transparent px-4" style="height: 47px;" name="treatment" autofocus="">
+                                            <option selected>Select Treatment</option>
+                                            <option value="Body Massage">Body Massage</option>
+                                            <option value="Stone Therapy">Stone Therapy</option>
+                                            <option value="Facial Therapy">Facial Therapy</option>
+                                            <option value="Skincare">Skincare</option>
+                                            <option value="Stream Bath">Stream Bath</option>
+                                            <option value="Face Masking">Face Masking</option>
+                                            <option value="Facial Treatment">Facial Treatment</option>
+                                            <option value="Cellulite Treatment">Cellulite Treatment</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <button class="btn btn-primary btn-block" type="submit" style="height: 47px;">Make Appointment</button>
+                                    <button class="btn btn-primary btn-block" type="submit" name= "submit" style="height: 47px;" onclick="return confirm('Apakah Anda sudah yakin dengan Reservasi ini?')">Make Appointment</button>
                                 </div>
                             </div>
                         </form>
@@ -193,17 +171,10 @@
     <!-- Open Hours End -->
 
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-                    <p class="m-0 text-white">&copy; <a href="#">AYLBeautySpa</a>. All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
+    <?php
+    // Memanggil footer
+    include ('../fh/footer.php');
+    ?>
 
 
     <!-- Back to Top -->

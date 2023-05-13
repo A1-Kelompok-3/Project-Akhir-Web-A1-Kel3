@@ -23,6 +23,40 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
+
+    <!-- data tables -->
+    <link rel="stylesheet" type="text/css" href="assets/datatables/datatables.min.css">
+    <script type="text/javascript" src="assets/datatables/datatables.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+
+    <style type="text/css">
+    
+        table {
+        border: solid 1px #DDEEEE;
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        margin: 10px auto 100px auto;
+
+        }
+        table thead th {
+            background-color: #DDEFEF;
+            border: solid 1px #DDEEEE;
+            color: #336B6B;
+            padding: 10px;
+            text-align: left;
+            text-shadow: 1px 1px 1px #fff;
+            text-decoration: none;
+        }
+        table tbody td {
+            border: solid 1px #DDEEEE;
+            color: #333;
+            padding: 10px;
+            text-shadow: 1px 1px 1px #fff;
+        }
+
+    </style>
     
 </head>
 
@@ -49,27 +83,69 @@
     </div>
     <!-- Navbar End -->
 
-s
+
     <!-- Menampilkan Tabel Reservasi Start -->
 
+    
+    <br>
+    <center><h1>Data Reservasi yang Telah Selesai</h1><center>
+    <div class="container">
+        <table id='example' style="margin bottom: 100px">
+        <thead>
+            <tr>
+            <th>ID</th>
+            <th>Nama</th>
+            <th>No HP</th>
+            <th>Tanggal</th>
+            <th>Waktu</th>
+            <th>Treatment</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php
+        include('../php/conn.php'); 
+        // jalankan query untuk menampilkan semua data diurutkan berdasarkan id
+        // $koneksi = mysqli_connect($host,$user,$pass,$nama_db)
+        $query = "SELECT * FROM riwayat ORDER BY id ASC";
+        $result = mysqli_query($koneksi, $query);
+        //mengecek apakah ada error ketika menjalankan query
+        if(!$result){
+            die ("Query Error: ".mysqli_error($koneksi).
+            " - ".mysqli_error($koneksi));
+        }
+
+        //buat perulangan untuk element tabel dari data reservasi
+        $no = 1; //variabel untuk membuat nomor urut
+        // hasil query akan disimpan dalam variabel $data dalam bentuk array
+        // kemudian dicetak dengan perulangan while
+        while($row = mysqli_fetch_assoc($result))
+        {
+        ?>
+        <tr>
+            <td><?php echo $no; ?></td>
+            <td><?php echo $row['nama']; ?></td>
+            <td><?php echo $row['no_hp']; ?></td>
+            <td><?php echo $row['tanggal']; ?></td>
+            <td><?php echo $row['waktu']; ?></td>
+            <td><?php echo $row['treatment']; ?></td>
+        </tr>
+            
+        <?php
+            $no++; //untuk nomor urut terus bertambah 1
+        }
+        ?>
+        </tbody>
+        </table>
+    </div>
 
     <!-- Menampilkan Tabel Reservasi END -->
 
 
 
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-                    <p class="m-0 text-white">&copy; <a href="#">AYLBeautySpa</a>. All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
+    <?php
+    // Memanggil footer
+    include ('../fh/footer.php');
+    ?>
 
 
     <!-- Back to Top -->
@@ -93,6 +169,19 @@ s
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
+
+    <!-- Datatables -->
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+
+
+
 </body>
 
 </html>

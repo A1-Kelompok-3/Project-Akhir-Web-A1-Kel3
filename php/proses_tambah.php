@@ -1,6 +1,6 @@
 <?php
 // memanggil file koneksi.php untuk melakukan koneksi database
-include '../php.conn.php';
+include 'conn.php';
 
 	// membuat variabel untuk menampung data dari form
   $treatment = $_POST['treatment'];
@@ -30,12 +30,12 @@ if($gambar != "") {
                   } else {
                     //tampil alert dan akan redirect ke halaman index.php
                     //silahkan ganti index.php sesuai halaman yang akan dituju
-                    echo "<script>alert('Data berhasil ditambah.');window.location='crud.php';</script>";
+                    echo "<script>alert('Data berhasil ditambah.');window.location='../admin/crud.php';</script>";
                   }
 
             } else {     
              //jika file ekstensi tidak jpg dan png maka alert ini yang tampil
-                echo "<script>alert('Ekstensi gambar yang boleh hanya jpg atau png.');window.location='tambah_treatment.php';</script>";
+                echo "<script>alert('Ekstensi gambar yang boleh hanya jpg atau png.');window.location='../admin/tambah_treatment.php';</script>";
             }
 } else {
    $query = "INSERT INTO treatment (treatment, description, estimasi, harga, gambar) VALUES ('$treatment', '$description', '$estimasi', '$harga', null)";
@@ -47,7 +47,7 @@ if($gambar != "") {
                   } else {
                     //tampil alert dan akan redirect ke halaman index.php
                     //silahkan ganti index.php sesuai halaman yang akan dituju
-                    echo "<script>alert('Data berhasil ditambah.');window.location='crud.php';</script>";
+                    echo "<script>alert('Data berhasil ditambah.');window.location='../admin/crud.php';</script>";
                   }
 }
 

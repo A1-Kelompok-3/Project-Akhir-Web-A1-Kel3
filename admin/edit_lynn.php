@@ -1,6 +1,6 @@
 <?php
   // memanggil file koneksi.php untuk membuat koneksi
-include '../php/conn.php';
+include 'conn.php';
 
   // mengecek apakah di url ada nilai GET id
   if (isset($_GET['id'])) {
@@ -79,7 +79,7 @@ include '../php/conn.php';
       <center>
         <h1>Edit Treatment <?php echo $data['treatment']; ?></h1>
       <center>
-      <form method="POST" action="proses_edit.php" enctype="multipart/form-data" >
+      <form method="POST" action="../php/proses_edit.php" enctype="multipart/form-data" >
       <section class="base">
         <!-- menampung nilai id produk yang akan di edit -->
         <input name="id" value="<?php echo $data['id']; ?>"  hidden />

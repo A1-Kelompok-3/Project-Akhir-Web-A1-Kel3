@@ -1,6 +1,6 @@
 <?php
 // memanggil file koneksi.php untuk melakukan koneksi database
-include '../php/conn.php';
+include 'conn.php';
 
 	// membuat variabel untuk menampung data dari form
   $id = $_POST['id'];
@@ -32,11 +32,11 @@ include '../php/conn.php';
                     } else {
                       //tampil alert dan akan redirect ke halaman index.php
                       //silahkan ganti index.php sesuai halaman yang akan dituju
-                      echo "<script>alert('Data berhasil diubah.');window.location='index.php';</script>";
+                      echo "<script>alert('Data berhasil diubah.');window.location='../admin/edit_lynn.php';</script>";
                     }
               } else {     
                //jika file ekstensi tidak jpg dan png maka alert ini yang tampil
-                  echo "<script>alert('Ekstensi gambar yang boleh hanya jpg atau png.');window.location='tambah_produk.php';</script>";
+                  echo "<script>alert('Ekstensi gambar yang boleh hanya jpg atau png.');window.location='../admin/edit_lynn.php';</script>";
               }
     } else {
       // jalankan query UPDATE berdasarkan ID yang produknya kita edit
@@ -51,6 +51,6 @@ include '../php/conn.php';
       } else {
         //tampil alert dan akan redirect ke halaman index.php
         //silahkan ganti index.php sesuai halaman yang akan dituju
-          echo "<script>alert('Data berhasil diubah.');window.location='index.php';</script>";
+          echo "<script>alert('Data berhasil diubah.');window.location='../admin/crud.php';</script>";
       }
     }

@@ -55,7 +55,7 @@
       <center>
         <h1>Tambah Treatment</h1>
       <center>
-      <form method="POST" action="proses_tambah.php" enctype="multipart/form-data" >
+      <form method="POST" action="../php/proses_tambah.php" enctype="multipart/form-data" >
       <section class="base">
         <div>
           <label>Layanan</label>

@@ -181,7 +181,7 @@
                         <h1 class="mb-4">Best Relax And Spa</h1>
                         <p>Temukan waktu yang tepat untuk bersantai dan meremajakan diri dengan jadwal spa kami yang fleksibel</p>
                         <ul class="list-inline">
-                            <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Senin – Jumat : 9:00 AM - 8:00 PM</li>
+                            <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Senin – Jumat : 9:00 - 20:00</li>
                             <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Sabtu : 9:30 AM - 6:00 PM</li>
                             <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Minggu : Tutup</li>
                         </ul>

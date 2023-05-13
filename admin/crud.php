@@ -91,7 +91,7 @@
     <!-- TABLE CRUD Start -->
 
     <center><h1>Data Treatment</h1><center>
-    <center><a href="tambah_layanan.php">+ &nbsp; Tambah Treatments</a><center>
+    <center><a href="tambah_layanan.php">+Tambah Treatments</a><center>
     <br/>
     <div class="container">
         <table id='example'>
@@ -133,7 +133,7 @@
             <td style="text-align: center;"><img src="../img/<?php echo $row['gambar']; ?>" style="width: 120px;"></td>
             <td>
                 <a href="edit_lynn.php?id=<?php echo $row['id']; ?>"><img src="../img/ubah.png" alt=""></a> |
-                <a href="proses_hapus.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')"><img src="../img/hapus.png" alt=""></a>
+                <a href="../php/proses_hapus.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')"><img src="../img/hapus.png" alt=""></a>
             </td>
         </tr>
             

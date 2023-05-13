@@ -1,5 +1,5 @@
 <?php
-include '../php/conn.php';
+include 'conn.php';
 $id = $_GET["id"];
 //mengambil id yang ingin dihapus
 
@@ -12,5 +12,5 @@ $id = $_GET["id"];
       die ("Gagal menghapus data: ".mysqli_errno($koneksi).
        " - ".mysqli_error($koneksi));
     } else {
-      echo "<script>alert('Data berhasil dihapus.');window.location='index.php';</script>";
+      echo "<script>alert('Data berhasil dihapus.');window.location='../admin/crud.php';</script>";
     }

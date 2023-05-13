@@ -84,97 +84,105 @@
     <!-- Navbar End -->
 
 
-<!-- Modal Login -->
-<div class="modal fade" id="exampleModall" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        </form>
-        <section class="login">
-                <form class="shadow w-450 p-3" 
-                    action="php/login.php" 
-                    method="post">
-                    <center>
-                    <h4>Masuk</h4><br>
-                    </center>
-                    <div class="mb-3">
-                        <label class="form-label">Email</label>
-                        <input type="text" class="form-control" name="uname" required autocomplete="off">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Password</label>
-                        <input type="password" class="form-control" name="pass" required autocomplete="off">
-                    
-                    <div class="mb-3">
-                        <label>Masuk Sebagi :
-                        <select name="role">
-                            <option value="customer">Custumer</option>
-                            <option value="admin">Admin</option>
-                            <option value="beatucian">Beatucian</option><br><br>
-                        </select>
-                        </label>
-                    </div>
-                    <div>
+    <!-- Modal Login -->
+    <div class="modal fade" id="exampleModall" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <section class="login">
+                    <form class="shadow w-450 p-3" 
+                        action="php/login.php" 
+                        method="post">
+                        
                         <center>
-                            <button type="button" class="btn btn-primary">Masuk</button>
+                        <h4>Masuk</h4><br>
                         </center>
-                    </div>
-                    </div> 
-                </form>
-	    </section>
-      </div>
-      
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="text" class="form-control" name="email" required autocomplete="off">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" name="password" required autocomplete="off">
+                        
+                        <div class="mb-3">
+                            <label>Masuk Sebagi :
+                            <select name="role">
+                                <option value="customer">Customer</option>
+                                <option value="admin">Admin</option>
+                                <option value="beatucian">Beatucian</option><br><br>
+                            </select>
+                            </label>
+                        </div>
+                        <div>
+                            <center>
+                                <input type="submit" name="login" class="btn btn-primary" value="Masuk">
+                            </center>
+                        </div>
+                        </div> 
+                    </form>
+            </section>
+        </div>
+        
+        </div>
     </div>
-  </div>
-</div>
+    </div>
     
-<!-- Modal SignUp -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        </form>
-        <section class="login">
-                <form class="shadow w-450 p-3" 
-                    action="php/login.php" 
-                    method="post">
-                    <center>
-                    <h4>Buat Akun</h4><br>
-                    </center>
-                    <div class="mb-3">
-                        <label class="form-label">Nama Lengkap</label>
-                        <input type="text" class="form-control" name="uname" required autocomplete="off">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Email</label>
-                        <input type="email" class="form-control" name="uname" required autocomplete="off">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Password</label>
-                        <input type="password" class="form-control" name="pass" required autocomplete="off">
-                    </div>
-                    <div>
+    <!-- Modal SignUp -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            </form>
+            <section class="register">
+                    <form class="shadow w-450 p-3" 
+                        action="php/regis.php" 
+                        method="post">
                         <center>
-                            <button type="button" class="btn btn-primary">Daftar</button>
+                        <h4>Buat Akun</h4><br>
+                        <?php if(isset($_GET['error'])){ ?>
+                        <div class="alert alert-danger" role="alert">
+                        <?php echo $_GET['error']; ?>
+                        </div>
+                        <?php } ?>
+
+    
                         </center>
-                    </div>
-                </form>
-	    </section>
-      </div>
-      
+
+                        <div class="mb-3">
+                            <label class="form-label">Nama Lengkap</label>
+                            <input type="text" class="form-control" name="nama" required autocomplete="off">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" required autocomplete="off">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" name="password" required autocomplete="off">
+                        </div>
+                        <div>
+                            <center>
+                                <input type="submit" name="register" class="btn btn-primary" value="Daftar">
+                            </center>
+                        </div>
+                    </form>
+            </section>
+        </div>
+        
+        </div>
     </div>
-  </div>
-</div>
+    </div>
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5 pb-5">
         <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
@@ -235,7 +243,7 @@
                         <div class="col-6">
                             <div class="bg-light text-center p-4">
                                 <h3 class="display-4 text-primary" data-toggle="counter-up">10</h3>
-                                <h6 class="text-uppercase">Spa Specialist</h6>
+                                <h6 class="text-uppercase">Spa Spesialis</h6>
                             </div>
                         </div>
                         <div class="col-6">
@@ -331,15 +339,14 @@
                 </div>
                 <div class="col-lg-6 pt-5 pb-lg-5">
                     <div class="hours-text bg-light p-4 p-lg-5 my-lg-5">
-                        <h6 class="d-inline-block text-white text-uppercase bg-primary py-1 px-2">Open Hours</h6>
+                        <h6 class="d-inline-block text-white text-uppercase bg-primary py-1 px-2">Jadwal Buka</h6>
                         <h1 class="mb-4">Best Relax And Spa Zone</h1>
                         <p>AYL Beauty and Spa hadir untuk memberikan perawatan kulit paling efektif dengan teknologi terkini untuk meremajakan, mencerahkan, dan mengembalikan kesehatan kulit anda.</p>
                         <ul class="list-inline">
-                            <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Mon – Fri : 9:00 AM - 7:00 PM</li>
-                            <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Saturday : 9:00 AM - 6:00 PM</li>
-                            <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Sunday : Closed</li>
+                            <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Senin – Jumat : 09:00 - 20:00 </li>
+                            <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Sabtu : 09:00 - 18:00 </li>
+                            <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Minggu : Tutup</li>
                         </ul>
-                        <!-- <a href="" class="btn btn-primary mt-2">Book Now</a> -->
                     </div>
                 </div>
             </div>

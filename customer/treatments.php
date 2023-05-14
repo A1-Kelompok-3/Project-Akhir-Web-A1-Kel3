@@ -32,6 +32,7 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
 </head>
 
 <body>
+
     <!-- Topbar Start -->
     <div class="container-fluid bg-light d-none d-lg-block">
         <div class="row py-2 px-lg-5">
@@ -100,6 +101,7 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
     </div>
     <!-- Header End -->
 
+    
 
     <!-- Service Start -->
     <div class="container-fluid px-0 py-5 my-5">
@@ -128,6 +130,7 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
                 <div class="service-text text-center">
                     <h4 class="text-white font-weight-medium px-3"><?php echo $row['treatment']; ?></h4>
                     <p class="text-white px-3 mb-3"><?php echo $row['description']; ?></p>
+                    <p class="text-white px-3 mb-3">Rp <?php echo $row['harga']; ?></p>
                     <div class="w-100 bg-white text-center p-4" >
                     <a class="btn btn-primary" href="appointment.php">Buat Resevasi</a>
                     </div>
@@ -141,8 +144,8 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
     <!-- Service End -->
 
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
+     <!-- Footer Start -->
+     <div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">

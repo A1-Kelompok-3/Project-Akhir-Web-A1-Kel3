@@ -31,4 +31,5 @@ include('../php/conn.php');
           echo "<script>alert('data berhasil ditambahkan ke dalam Riwayat');window.location='crud_reservasi.php';</script>";
         }
     }
+
     ?>

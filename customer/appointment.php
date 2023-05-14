@@ -33,6 +33,7 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
 </head>
 
 <body>
+
     <!-- Topbar Start -->
     <div class="container-fluid bg-light d-none d-lg-block">
         <div class="row py-2 px-lg-5">
@@ -65,6 +66,7 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
         </div>
     </div>
     <!-- Topbar End -->
+
 
 
     <!-- Navbar Start -->
@@ -132,6 +134,7 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
                                     </div>
                                 </div>
                             </div>
+
                             <div class="form-row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
@@ -148,11 +151,12 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
                                     </div>
                                 </div>
                             </div>
+
                             <div class="form-row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <select class="custom-select bg-transparent px-4" style="height: 47px;" name="treatment" autofocus="">
-                                            <option selected>Pilih Reservasi</option>
+                                            <option selected>Pilih Layanan</option>
                                             <?php
                                                 include ('../php/conn.php');
                                                 // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
@@ -170,12 +174,11 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
                                             <?php
                                             }
                                             ?>
-                                            
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                <button class="btn btn-primary btn-block" type="submit" name= "submit" style="height: 47px;" onclick="return confirm('Apakah Anda sudah yakin dengan Reservasi ini?')">Make Appointment</button>
+                                <button class="btn btn-primary btn-block" type="submit" name= "submit" style="height: 47px;" onclick="return confirm('Apakah Anda sudah yakin dengan Reservasi ini?')">Buat Reservasi</button>
                                 </div>
                             </div>
                         </form>
@@ -214,8 +217,8 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
     <!-- Open Hours End -->
 
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
+     <!-- Footer Start -->
+     <div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">

@@ -218,7 +218,6 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
     </div>
     <!-- Team End -->
 
-
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
         <div class="container">

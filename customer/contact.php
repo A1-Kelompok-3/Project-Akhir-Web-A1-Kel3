@@ -32,6 +32,7 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
 </head>
 
 <body>
+
     <!-- Topbar Start -->
     <div class="container-fluid bg-light d-none d-lg-block">
         <div class="row py-2 px-lg-5">
@@ -64,6 +65,7 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
         </div>
     </div>
     <!-- Topbar End -->
+
 
 
     <!-- Navbar Start -->
@@ -144,8 +146,8 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
     <!-- Contact End -->
     
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
+     <!-- Footer Start -->
+     <div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">

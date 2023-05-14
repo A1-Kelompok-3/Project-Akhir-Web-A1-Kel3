@@ -137,15 +137,15 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
         while($row = mysqli_fetch_assoc($result))
         {
         ?>
-        <td><?php echo $no; ?></td>
+        <tr>
+            <td><?php echo $no; ?></td>
             <td><?php echo $row['nama']; ?></td>
             <td><?php echo $row['no_hp']; ?></td>
             <td><?php echo $row['tanggal']; ?></td>
             <td><?php echo $row['waktu']; ?></td>
             <td><?php echo $row['treatment']; ?></td>
-            <td>
-
-                <a href="proses_hapus.php?kode_reservasi=<?php echo $row['kode_reservasi']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')" class="btn btn-primary btn-sm">Hapus</a> |
+            <td width="15%">
+            <a href="proses_hapus.php?kode_reservasi=<?php echo $row['kode_reservasi']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')" class="btn btn-primary btn-sm">Hapus</a> |
                 <a href="selesai.php?kode_reservasi=<?php echo $row['kode_reservasi']; ?>" onclick="return confirm('Apakah Reservasi ini Telah Selesai?')" class="btn btn-primary btn-sm">Selesai</a>
             </td>
         </tr>
@@ -160,8 +160,8 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
     <!-- TABLE CRUD End -->
 
 
+
     <!-- Footer Start -->
-    <footer>
     <div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
         <div class="container">
             <div class="row">
@@ -171,9 +171,8 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
             </div>
         </div>
     </div>
-    </footer>
     <!-- Footer End -->
-    
+
 
 
     <!-- Back to Top -->

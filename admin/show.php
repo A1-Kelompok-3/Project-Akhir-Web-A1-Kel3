@@ -32,14 +32,21 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
-    <style type="text/css">
+    
+    <!-- data tables -->
+    <link rel="stylesheet" type="text/css" href="assets/datatables/datatables.min.css">
+     <script type="text/javascript" src="assets/datatables/datatables.min.js"></script>
+
+     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css"> -->
+     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+     <style type="text/css">
     
     table {
     border: solid 1px #DDEEEE;
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
-    margin: 10px auto 80px auto;
+    margin: 10px auto 100px auto;
 
     }
     table thead th {
@@ -59,7 +66,7 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
     }
 
 </style>
-</head>
+    </head>
 
 <body>
 
@@ -99,9 +106,7 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
     <!-- Header End -->
 
     <!-- Menampilkan Tabel Reservasi Start -->
-
     <br>
-    
     <div class="container">
         <table id='example' style="margin bottom: 100px">
         <thead>
@@ -150,26 +155,23 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
         </tbody>
         </table>
     </div>
-
     <!-- Menampilkan Tabel Reservasi END -->
 
 
 
 
-       <!-- Footer Start -->
-    <footer>
-        <div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-                        <p class="m-0 text-white">&copy; <a href="#">AYLBeautySpa</a>. All Rights Reserved.</p>
-                    </div>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                    <p class="m-0 text-white">&copy; <a href="#">AYLBeautySpa</a>. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
-    </footer>
- 
+    </div>
+    <!-- Footer End -->
+
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
@@ -192,6 +194,7 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
+
     <script>
         $(document).ready(function () {
     $('#example').DataTable();
@@ -200,6 +203,7 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+
 </body>
 
 </html>

@@ -1,3 +1,9 @@
+<?php 
+session_start();
+
+if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,7 +83,10 @@
                     <a href="appointment.php" class="nav-item nav-link">Reservasi</a>
                     <a href="contact.php" class="nav-item nav-link">Kontak Kami</a>
                 </div>
-                <a href="../index.php" class="btn btn-primary d-none d-lg-block">Keluar</a>
+                <divclass="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <a><?=$_SESSION['nama']?></a>   
+                </div>
+                <a href="../php/keluar.php" class="btn btn-primary d-none d-lg-block">Keluar</a>
             </div>
         </nav>
     </div>
@@ -102,23 +111,24 @@
             <div class="row mx-0 justify-content-center text-center">
                 <div class="col-lg-6">
                     <h6 class="d-inline-block bg-light text-primary text-uppercase py-1 px-2">Reservasi</h6>
-                    <h1 class="mb-5">Buat Reservasi</h1>
                 </div>
             </div>
             <div class="row justify-content-center bg-appointment mx-0">
                 <div class="col-lg-6 py-5">
                     <div class="p-5 my-5" style="background: rgba(33, 30, 28, 0.7);">
                         <h1 class="text-white text-center mb-4">Buat Reservasi</h1>
-                        <form>
+                        <form method="POST" action="proses_reservasi.php" enctype="multipart/form-data" >
                             <div class="form-row">
                                 <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control bg-transparent p-4" placeholder="Your Name" required="required" />
+                                    <div class="form-group"> 
+                                        <div class="form-control bg-transparent p-4">
+                                        <p id="nama" name="nama" style="position: relative; top: -10px;" ><?=$_SESSION['nama']?> </p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="tel" class="form-control bg-transparent p-4" placeholder="Your Number" required="required" />
+                                        <input type="tel" class="form-control bg-transparent p-4" placeholder="Your Number" id= "no_hp" name="no_hp" autofocus="" autocomplete="off" required="required" />
                                     </div>
                                 </div>
                             </div>
@@ -126,14 +136,14 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <div class="date" id="date" data-target-input="nearest">
-                                            <input type="date" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Select Date" data-target="#date" data-toggle="datetimepicker"/>
+                                            <input type="date" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Select Date" id= "tanggal" name="tanggal" data-target="#date" data-toggle="datetimepicker"/>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <div class="time" id="time" data-target-input="nearest">
-                                            <input type="time" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Select Time" data-target="#time" data-toggle="datetimepicker"/>
+                                            <input type="time" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Select Time" data-target="#time" id= "waktu" name="waktu" autofocus="" data-toggle="datetimepicker"/>
                                         </div>
                                     </div>
                                 </div>
@@ -141,20 +151,31 @@
                             <div class="form-row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <select class="custom-select bg-transparent px-4" style="height: 47px;">
+                                        <select class="custom-select bg-transparent px-4" style="height: 47px;" name="treatment" autofocus="">
                                             <option selected>Pilih Reservasi</option>
-                                            <option value="1">Body Massage</option>
-                                            <option value="2">Stone Therapy</option>
-                                            <option value="3">Facial Therapy</option>
-                                            <option value="3">Skin Care</option>
-                                            <option value="3">Stream Bath</option>
-                                            <option value="3">Face Masking</option>
-                                            <!-- <option value="4">Facial Therapy</option> -->
+                                            <?php
+                                                include ('../php/conn.php');
+                                                // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
+                                                $query = "SELECT * FROM layanan ORDER BY id ASC";
+                                                $result = mysqli_query($koneksi, $query);
+                                                //mengecek apakah ada error ketika menjalankan query
+                                                if(!$result){
+                                                    die ("Query Error: ".mysqli_error($koneksi).
+                                                    " - ".mysqli_error($koneksi));
+                                                }
+                                                while($row = mysqli_fetch_assoc($result))
+                                                {
+                                                ?>
+                                            <option value="<?php echo $row['treatment']; ?>"><?php echo $row['treatment']; ?></option>
+                                            <?php
+                                            }
+                                            ?>
+                                            
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <button class="btn btn-primary btn-block" type="submit" style="height: 47px;">Make Appointment</button>
+                                <button class="btn btn-primary btn-block" type="submit" name= "submit" style="height: 47px;" onclick="return confirm('Apakah Anda sudah yakin dengan Reservasi ini?')">Make Appointment</button>
                                 </div>
                             </div>
                         </form>
@@ -227,6 +248,11 @@
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
-</body>
 
+    
+</body>
 </html>
+<?php }else {
+	header("Location: ../index.php");
+	exit;
+} ?>

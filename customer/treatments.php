@@ -1,3 +1,9 @@
+<?php 
+session_start();
+
+if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,7 +82,10 @@
                     <a href="appointment.php" class="nav-item nav-link">Reservasi</a>
                     <a href="contact.php" class="nav-item nav-link">Kontak Kami</a>
                 </div>
-                <a href="../index.php" class="btn btn-primary d-none d-lg-block">Keluar</a>
+                <divclass="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <a><?=$_SESSION['nama']?></a>   
+                </div>
+                <a href="../php/keluar.php" class="btn btn-primary d-none d-lg-block">Keluar</a>
             </div>
         </nav>
     </div>
@@ -101,61 +110,32 @@
             </div>
         </div>
         <div class="owl-carousel service-carousel">
+            <?php
+                include ('../php/conn.php');
+            // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
+            $query = "SELECT * FROM layanan ORDER BY id ASC";
+            $result = mysqli_query($koneksi, $query);
+            //mengecek apakah ada error ketika menjalankan query
+            if(!$result){
+                die ("Query Error: ".mysqli_error($koneksi).
+                " - ".mysqli_error($koneksi));
+            }
+            while($row = mysqli_fetch_assoc($result))
+            {
+            ?>
             <div class="service-item position-relative">
-                <img class="img-fluid" src="../img/service-1.jpg" alt="">
+                <img class="img-fluid" src="../img/<?php echo $row['gambar']; ?>" alt="">
                 <div class="service-text text-center">
-                    <h4 class="text-white font-weight-medium px-3">Body Massage</h4>
-                    <p class="text-white px-3 mb-3">Perawatan tubuh dengan menggunakan bahan-bahan alami untuk menjadikan kulit tubuh menjadi lebih bersih, sehat dan bersinar.</p>
+                    <h4 class="text-white font-weight-medium px-3"><?php echo $row['treatment']; ?></h4>
+                    <p class="text-white px-3 mb-3"><?php echo $row['description']; ?></p>
                     <div class="w-100 bg-white text-center p-4" >
+                    <a class="btn btn-primary" href="appointment.php">Buat Resevasi</a>
                     </div>
                 </div>
             </div>
-            <div class="service-item position-relative">
-                <img class="img-fluid" src="../img/service-2.jpg" alt="">
-                <div class="service-text text-center">
-                    <h4 class="text-white font-weight-medium px-3">Stone Therapy</h4>
-                    <p class="text-white px-3 mb-3">Stone Theraphy merupakan terapi untuk menyerap energi positif dan mengeluarkan energi negatif dalam tubuh menggunakan batu kristal untuk menjaga keseimbangan jiwa raga dan ketenangan.</p>
-                    <div class="w-100 bg-white text-center p-4" >
-                    </div>
-                </div>
-            </div>
-            <div class="service-item position-relative">
-                <img class="img-fluid" src="../img/service-3.jpg" alt="">
-                <div class="service-text text-center">
-                    <h4 class="text-white font-weight-medium px-3">Facial Therapy</h4>
-                    <p class="text-white px-3 mb-3">Perpaduan facial dan terapi herbal untuk kulit sensitif guna menyegarkan dan melembabkan kulit wajah. Sehingga menjadikan kulit wajah lebih cerah dan berseri.</p>
-                    <div class="w-100 bg-white text-center p-4" >
-                    </div>
-                </div>
-            </div>
-            <div class="service-item position-relative">
-                <img class="img-fluid" src="../img/service-4.jpg" alt="">
-                <div class="service-text text-center">
-                    <h4 class="text-white font-weight-medium px-3">Skin Care</h4>
-                    <p class="text-white px-3 mb-3">AYL Beauty and Spa Mempunyai Produk skincare yang akan membuat kulit anda semakin cantik, sehat dan bersinar.</p>
-                    <div class="w-100 bg-white text-center p-4" >
-                    </div>
-                </div>
-            </div>
-            <div class="service-item position-relative">
-                <img class="img-fluid" src="../img/service-5.jpg" alt="">
-                <div class="service-text text-center">
-                    <h4 class="text-white font-weight-medium px-3">Stream Bath</h4>
-                    <p class="text-white px-3 mb-3">Steam bath diyakini dapat menyehatkan tubuh dengan membuka poripori kulit sehingga dapat menyehatkan dan mempercantik tampilan kulit.</p>
-                    <div class="w-100 bg-white text-center p-4" >
-                    </div>
-                </div>
-            </div>
-            <div class="service-item position-relative">
-                <img class="img-fluid" src="../img/service-6.jpg" alt="">
-                <div class="service-text text-center">
-                    <h4 class="text-white font-weight-medium px-3">Face Masking</h4>
-                    <p class="text-white px-3 mb-3">Perawatan masker wajah untuk membantu meningkatkan pembetukkan collagen dan menghaluskan permukaan kulit.</p>
-                    <div class="w-100 bg-white text-center p-4" >
-                    <a class="btn btn-primary" href="">Make Order</a>
-                    </div>
-                </div>
-            </div>
+            <?php
+            }
+            ?>
         </div>
     </div>
     <!-- Service End -->
@@ -196,5 +176,8 @@
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
 </body>
-
 </html>
+<?php }else {
+	header("Location: ../index.php");
+	exit;
+} ?>

@@ -101,7 +101,13 @@
                         
                         <center>
                         <h4>Masuk</h4><br>
+                        <?php if(isset($_GET['error'])){ ?>
+                        <div class="alert alert-danger" role="alert">
+                        <?php echo $_GET['error']; ?>
+                        </div>
+                        <?php } ?>
                         </center>
+
                         <div class="mb-3">
                             <label class="form-label">Email</label>
                             <input type="text" class="form-control" name="email" required autocomplete="off">
@@ -115,7 +121,7 @@
                             <select name="role">
                                 <option value="customer">Customer</option>
                                 <option value="admin">Admin</option>
-                                <option value="beatucian">Beatucian</option><br><br>
+                                <option value="beautician">Beautician</option><br><br>
                             </select>
                             </label>
                         </div>
@@ -156,7 +162,11 @@
                         </div>
                         <?php } ?>
 
-    
+                        <?php if(isset($_GET['success'])){ ?>
+                        <div class="alert alert-success" role="alert">
+                        <?php echo $_GET['success']; ?>
+                        </div>
+                        <?php } ?>
                         </center>
 
                         <div class="mb-3">
@@ -483,5 +493,4 @@
     </script>
     
 </body>
-
 </html>

@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 include "conn.php";
 
 if(isset($_POST["register"])){
@@ -11,10 +12,13 @@ if(isset($_POST["register"])){
 
     if(mysqli_query($koneksi, $query)){
         header("Location: ../index.php?success=Akun Berhasil Terdaftar");
+        exit;
     } else {
-        echo "<script>
-        alert('Gagal terdaftar');
-        document.location.href = '../index.php';</script>";
+        // echo "<script>
+        // alert('Gagal terdaftar');
+        // document.location.href = '../index.php';</script>";
+        header("Location: ../index.php?error=error");
+	    exit;
     }
     
 }    

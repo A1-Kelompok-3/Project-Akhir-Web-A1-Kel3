@@ -1,6 +1,6 @@
 <?php
   // memanggil file koneksi.php untuk membuat koneksi
-include 'conn.php';
+include '../php/conn.php';
 
   // mengecek apakah di url ada nilai GET id
   if (isset($_GET['id'])) {
@@ -19,11 +19,11 @@ include 'conn.php';
     $data = mysqli_fetch_assoc($result);
       // apabila data tidak ada pada database maka akan dijalankan perintah ini
        if (!count($data)) {
-          echo "<script>alert('Data tidak ditemukan pada database');window.location='index.php';</script>";
+          echo "<script>alert('Data tidak ditemukan pada database');window.location='crud.php';</script>";
        }
   } else {
-    // apabila tidak ada data GET id pada akan di redirect ke index.php
-    echo "<script>alert('Masukkan data id.');window.location='index.php';</script>";
+    // apabila tidak ada data GET id pada akan di redirect ke crud.php
+    echo "<script>alert('Masukkan data id.');window.location='crud.php';</script>";
   }         
   ?>
 <!DOCTYPE html>

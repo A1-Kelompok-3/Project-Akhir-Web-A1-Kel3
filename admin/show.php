@@ -1,3 +1,8 @@
+<?php 
+session_start();
+
+if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +21,10 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
+    <!-- data tables -->
+    <link rel="stylesheet" type="text/css" href="assets/datatables/datatables.min.css">
+    <script type="text/javascript" src="assets/datatables/datatables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
     <!-- Libraries Stylesheet -->
     <link href="../lib/animate/animate.min.css" rel="stylesheet">
     <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -23,42 +32,41 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
-
+    
     <!-- data tables -->
     <link rel="stylesheet" type="text/css" href="assets/datatables/datatables.min.css">
-    <script type="text/javascript" src="assets/datatables/datatables.min.js"></script>
+     <script type="text/javascript" src="assets/datatables/datatables.min.js"></script>
 
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
-
-    <style type="text/css">
+     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css"> -->
+     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+     <style type="text/css">
     
-        table {
+    table {
+    border: solid 1px #DDEEEE;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin: 10px auto 100px auto;
+
+    }
+    table thead th {
+        background-color: #DDEFEF;
         border: solid 1px #DDEEEE;
-        border-collapse: collapse;
-        border-spacing: 0;
-        width: 100%;
-        margin: 10px auto 100px auto;
+        color: #336B6B;
+        padding: 10px;
+        text-align: left;
+        text-shadow: 1px 1px 1px #fff;
+        text-decoration: none;
+    }
+    table tbody td {
+        border: solid 1px #DDEEEE;
+        color: #333;
+        padding: 10px;
+        text-shadow: 1px 1px 1px #fff;
+    }
 
-        }
-        table thead th {
-            background-color: #DDEFEF;
-            border: solid 1px #DDEEEE;
-            color: #336B6B;
-            padding: 10px;
-            text-align: left;
-            text-shadow: 1px 1px 1px #fff;
-            text-decoration: none;
-        }
-        table tbody td {
-            border: solid 1px #DDEEEE;
-            color: #333;
-            padding: 10px;
-            text-shadow: 1px 1px 1px #fff;
-        }
-
-    </style>
-    
-</head>
+</style>
+    </head>
 
 <body>
 
@@ -77,18 +85,28 @@
                     <a href="crud.php" class="nav-item nav-link">Layanan</a>
                     <a href="show.php" class="nav-item nav-link">Reservasi</a>
                 </div>
+                <divclass="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <a><?=$_SESSION['nama']?></a>   
+                </div>
                 <a href="../index.php" class="btn btn-primary d-none d-lg-block">Keluar</a>
             </div>
         </nav>
     </div>
     <!-- Navbar End -->
 
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid bg-jumbotron" style="margin-bottom: 90px;">
+        <div class="container text-center py-5">
+            <h3 class="text-white display-3 mb-4">Riwayat Reservasi</h3>
+            <div class="d-inline-flex align-items-center text-white">
+                
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
 
     <!-- Menampilkan Tabel Reservasi Start -->
-
-    
     <br>
-    <center><h1>Data Reservasi yang Telah Selesai</h1><center>
     <div class="container">
         <table id='example' style="margin bottom: 100px">
         <thead>
@@ -137,15 +155,22 @@
         </tbody>
         </table>
     </div>
-
     <!-- Menampilkan Tabel Reservasi END -->
 
 
 
-    <?php
-    // Memanggil footer
-    include ('../fh/footer.php');
-    ?>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                    <p class="m-0 text-white">&copy; <a href="#">AYLBeautySpa</a>. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
 
     <!-- Back to Top -->
@@ -170,18 +195,19 @@
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
 
-    <!-- Datatables -->
     <script>
         $(document).ready(function () {
-            $('#example').DataTable();
-        });
+    $('#example').DataTable();
+});
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
 
-
-
 </body>
 
 </html>
+<?php }else {
+	header("Location: ../index.php");
+	exit;
+} ?>

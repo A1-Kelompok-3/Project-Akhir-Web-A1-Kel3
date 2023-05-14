@@ -1,3 +1,9 @@
+<?php 
+session_start();
+
+if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,10 +33,38 @@
 
 <body>
 
-    <?php
-    // Memanggil topbar
-    include ('../fh/header.php');
-    ?>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light d-none d-lg-block">
+        <div class="row py-2 px-lg-5">
+            <div class="col-lg-6 text-left mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center">
+                    <small><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</small>
+                    <small class="px-3">|</small>
+                    <small><i class="fa fa-envelope mr-2"></i>AYLBeautySpa@gmail.com</small>
+                </div>
+            </div>
+            <div class="col-lg-6 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-primary px-2" href="">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-primary px-2" href="">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-primary px-2" href="">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="text-primary px-2" href="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="text-primary pl-2" href="">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
 
 
     <!-- Navbar Start -->
@@ -49,7 +83,10 @@
                     <a href="appointment.php" class="nav-item nav-link">Reservasi</a>
                     <a href="contact.php" class="nav-item nav-link">Kontak Kami</a>
                 </div>
-                <a href="../index.php" class="btn btn-primary d-none d-lg-block">Keluar</a>
+                <divclass="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <a><?=$_SESSION['nama']?></a>   
+                </div>
+                <a href="../php/keluar.php" class="btn btn-primary d-none d-lg-block">Keluar</a>
             </div>
         </nav>
     </div>
@@ -64,6 +101,7 @@
     </div>
     <!-- Header End -->
 
+    
 
     <!-- Service Start -->
     <div class="container-fluid px-0 py-5 my-5">
@@ -74,70 +112,49 @@
             </div>
         </div>
         <div class="owl-carousel service-carousel">
+            <?php
+                include ('../php/conn.php');
+            // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
+            $query = "SELECT * FROM layanan ORDER BY id ASC";
+            $result = mysqli_query($koneksi, $query);
+            //mengecek apakah ada error ketika menjalankan query
+            if(!$result){
+                die ("Query Error: ".mysqli_error($koneksi).
+                " - ".mysqli_error($koneksi));
+            }
+            while($row = mysqli_fetch_assoc($result))
+            {
+            ?>
             <div class="service-item position-relative">
-                <img class="img-fluid" src="../img/service-1.jpg" alt="">
+                <img class="img-fluid" src="../img/<?php echo $row['gambar']; ?>" alt="">
                 <div class="service-text text-center">
-                    <h4 class="text-white font-weight-medium px-3">Body Massage</h4>
-                    <p class="text-white px-3 mb-3">Perawatan tubuh dengan menggunakan bahan-bahan alami untuk menjadikan kulit tubuh menjadi lebih bersih, sehat dan bersinar.</p>
+                    <h4 class="text-white font-weight-medium px-3"><?php echo $row['treatment']; ?></h4>
+                    <p class="text-white px-3 mb-3"><?php echo $row['description']; ?></p>
+                    <p class="text-white px-3 mb-3">Rp <?php echo $row['harga']; ?></p>
                     <div class="w-100 bg-white text-center p-4" >
+                    <a class="btn btn-primary" href="appointment.php">Buat Resevasi</a>
                     </div>
                 </div>
             </div>
-            <div class="service-item position-relative">
-                <img class="img-fluid" src="../img/service-2.jpg" alt="">
-                <div class="service-text text-center">
-                    <h4 class="text-white font-weight-medium px-3">Stone Therapy</h4>
-                    <p class="text-white px-3 mb-3">Stone Theraphy merupakan terapi untuk menyerap energi positif dan mengeluarkan energi negatif dalam tubuh menggunakan batu kristal untuk menjaga keseimbangan jiwa raga dan ketenangan.</p>
-                    <div class="w-100 bg-white text-center p-4" >
-                    </div>
-                </div>
-            </div>
-            <div class="service-item position-relative">
-                <img class="img-fluid" src="../img/service-3.jpg" alt="">
-                <div class="service-text text-center">
-                    <h4 class="text-white font-weight-medium px-3">Facial Therapy</h4>
-                    <p class="text-white px-3 mb-3">Perpaduan facial dan terapi herbal untuk kulit sensitif guna menyegarkan dan melembabkan kulit wajah. Sehingga menjadikan kulit wajah lebih cerah dan berseri.</p>
-                    <div class="w-100 bg-white text-center p-4" >
-                    </div>
-                </div>
-            </div>
-            <div class="service-item position-relative">
-                <img class="img-fluid" src="../img/service-4.jpg" alt="">
-                <div class="service-text text-center">
-                    <h4 class="text-white font-weight-medium px-3">Skin Care</h4>
-                    <p class="text-white px-3 mb-3">AYL Beauty and Spa Mempunyai Produk skincare yang akan membuat kulit anda semakin cantik, sehat dan bersinar.</p>
-                    <div class="w-100 bg-white text-center p-4" >
-                    </div>
-                </div>
-            </div>
-            <div class="service-item position-relative">
-                <img class="img-fluid" src="../img/service-5.jpg" alt="">
-                <div class="service-text text-center">
-                    <h4 class="text-white font-weight-medium px-3">Stream Bath</h4>
-                    <p class="text-white px-3 mb-3">Steam bath diyakini dapat menyehatkan tubuh dengan membuka poripori kulit sehingga dapat menyehatkan dan mempercantik tampilan kulit.</p>
-                    <div class="w-100 bg-white text-center p-4" >
-                    </div>
-                </div>
-            </div>
-            <div class="service-item position-relative">
-                <img class="img-fluid" src="../img/service-6.jpg" alt="">
-                <div class="service-text text-center">
-                    <h4 class="text-white font-weight-medium px-3">Face Masking</h4>
-                    <p class="text-white px-3 mb-3">Perawatan masker wajah untuk membantu meningkatkan pembetukkan collagen dan menghaluskan permukaan kulit.</p>
-                    <div class="w-100 bg-white text-center p-4" >
-                    <a class="btn btn-primary" href="">Make Order</a>
-                    </div>
-                </div>
-            </div>
+            <?php
+            }
+            ?>
         </div>
     </div>
     <!-- Service End -->
 
 
-    <?php
-    // Memanggil footer
-    include ('../fh/footer.php');
-    ?>
+     <!-- Footer Start -->
+     <div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                    <p class="m-0 text-white">&copy; <a href="#">AYLBeautySpa</a>. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
 
     <!-- Back to Top -->
@@ -162,5 +179,8 @@
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
 </body>
-
 </html>
+<?php }else {
+	header("Location: ../index.php");
+	exit;
+} ?>

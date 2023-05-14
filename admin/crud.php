@@ -1,7 +1,10 @@
 <?php
-  include('../php/conn.php'); //agar index terhubung dengan database, maka koneksi sebagai penghubung harus di include
+session_start();
+if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
+    include('../php/conn.php'); //agar index terhubung dengan database, maka koneksi sebagai penghubung harus di include
   
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,6 +63,9 @@
             padding: 10px;
             text-shadow: 1px 1px 1px #fff;
         }
+        .title{
+            padding-top: 15px;
+        }
 
     </style>
     
@@ -82,17 +88,32 @@
                     <a href="crud.php" class="nav-item nav-link">Layanan</a>
                     <a href="show.php" class="nav-item nav-link">Reservasi</a>
                 </div>
+                <divclass="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <a><?=$_SESSION['nama']?></a>   
+                </div>
                 <a href="../index.php" class="btn btn-primary d-none d-lg-block">Keluar</a>
             </div>
         </nav>
     </div>
     <!-- Navbar End -->
+    
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid bg-jumbotron" style="margin-bottom: 90px;">
+        <div class="container text-center py-5">
+            <h3 class="text-white display-3 mb-4">Data Layanan</h3>
+            <div class="d-inline-flex align-items-center text-white">
+                
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
 
     <!-- TABLE CRUD Start -->
-
-    <center><h1>Data Treatment</h1><center>
-    <center><a href="tambah_layanan.php">+Tambah Treatments</a><center>
+    <div class="title">
+    <center><a href="tambah_layanan.php" class="btn btn-primary">Tambah Layanan</a><center>
     <br/>
+    </div>
+    
     <div class="container">
         <table id='example'>
         <thead>
@@ -129,9 +150,9 @@
             <td><?php echo $row['treatment']; ?></td>
             <td><?php echo $row['description']; ?></td>
             <td><?php echo $row['estimasi']; ?> menit </td>
-            <td>Rp <?php echo $row['harga']; ?></td>
+            <td width='10%'>Rp <?php echo $row['harga']; ?></td>
             <td style="text-align: center;"><img src="../img/<?php echo $row['gambar']; ?>" style="width: 120px;"></td>
-            <td>
+            <td width='10%'>
                 <a href="edit_lynn.php?id=<?php echo $row['id']; ?>"><img src="../img/ubah.png" alt=""></a> |
                 <a href="../php/proses_hapus.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')"><img src="../img/hapus.png" alt=""></a>
             </td>
@@ -195,3 +216,7 @@
 </body>
 
 </html>
+<?php }else {
+	header("Location: ../index.php");
+	exit;
+} ?>

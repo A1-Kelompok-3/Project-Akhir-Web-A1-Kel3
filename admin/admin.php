@@ -1,3 +1,9 @@
+<?php 
+session_start();
+
+if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,6 +48,9 @@
                     <a href="admin.php" class="nav-item nav-link active">Beranda</a>
                     <a href="crud.php" class="nav-item nav-link">Layanan</a>
                     <a href="show.php" class="nav-item nav-link">Reservasi</a>
+                </div>
+                <divclass="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <a><?=$_SESSION['nama']?></a>   
                 </div>
                 <a href="../index.php" class="btn btn-primary d-none d-lg-block">Keluar</a>
             </div>
@@ -246,5 +255,8 @@
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
 </body>
-
 </html>
+<?php }else {
+	header("Location: ../index.php");
+	exit;
+} ?>

@@ -1,7 +1,11 @@
 <?php
+session_start();
+
+if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
   include('../php/conn.php'); //agar index terhubung dengan database, maka koneksi sebagai penghubung harus di include
   
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -81,25 +85,37 @@
                     <a href="beatucian.php" class="nav-item nav-link active">Beranda</a>
                     <a href="crud_reservasi.php" class="nav-item nav-link">Reservasi</a>
                 </div>
+                <divclass="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <a><?=$_SESSION['nama']?></a>   
+                </div>
                 <a href="../index.php" class="btn btn-primary d-none d-lg-block">Keluar</a>
             </div>
         </nav>
     </div>
     <!-- Navbar End -->
+    
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid bg-jumbotron" style="margin-bottom: 90px;">
+        <div class="container text-center py-5">
+            <h3 class="text-white display-3 mb-4">Data Reservasi</h3>
+            <div class="d-inline-flex align-items-center text-white">
+                
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
 
     <!-- TABLE CRUD Start -->
-
-    <center><h1>Data Reservasi</h1><center>
     <div class="container">
         <table id='example'>
         <thead>
             <tr>
             <th>ID</th>
-            <th>Tanggal</th>
-            <th>Waktu</th>
             <th>Nama</th>
             <th>No HP</th>
-            <th>Treatment</th>
+            <th>Tanggal</th>
+            <th>Jam</th>
+            <th>Layanan</th>
             <th>Action</th>
             </tr>
         </thead>
@@ -128,9 +144,8 @@
             <td><?php echo $row['tanggal']; ?></td>
             <td><?php echo $row['waktu']; ?></td>
             <td><?php echo $row['treatment']; ?></td>
-            <td>
-
-                <a href="proses_hapus.php?kode_reservasi=<?php echo $row['kode_reservasi']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a> |
+            <td width="15%">
+            <a href="proses_hapus.php?kode_reservasi=<?php echo $row['kode_reservasi']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')" class="btn btn-primary btn-sm">Hapus</a> |
                 <a href="selesai.php?kode_reservasi=<?php echo $row['kode_reservasi']; ?>" onclick="return confirm('Apakah Reservasi ini Telah Selesai?')" class="btn btn-primary btn-sm">Selesai</a>
             </td>
         </tr>
@@ -146,10 +161,18 @@
 
 
 
-    <?php
-    // Memanggil footer
-    include ('../fh/footer.php');
-    ?>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                    <p class="m-0 text-white">&copy; <a href="#">AYLBeautySpa</a>. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
 
 
     <!-- Back to Top -->
@@ -186,3 +209,7 @@
 </body>
 
 </html>
+<?php }else {
+	header("Location: ../index.php");
+	exit;
+} ?>

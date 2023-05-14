@@ -1,3 +1,8 @@
+<?php 
+session_start();
+
+if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,6 +47,9 @@
                 <div class="navbar-nav m-auto py-0">
                     <a href="beatucian.php" class="nav-item nav-link active">Beranda</a>
                     <a href="crud_reservasi.php" class="nav-item nav-link">Reservasi</a>
+                </div>
+                <divclass="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <a><?=$_SESSION['nama']?></a>   
                 </div>
                 <a href="../index.php" class="btn btn-primary d-none d-lg-block">Keluar</a>
             </div>
@@ -210,11 +218,17 @@
     </div>
     <!-- Team End -->
 
-
-    <?php
-    // Memanggil footer
-    include ('../fh/footer.php');
-    ?>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                    <p class="m-0 text-white">&copy; <a href="#">AYLBeautySpa</a>. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
 
     <!-- Back to Top -->
@@ -241,3 +255,7 @@
 </body>
 
 </html>
+<?php }else {
+	header("Location: ../index.php");
+	exit;
+} ?>

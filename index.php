@@ -28,11 +28,38 @@
 
 <body>
     
-    <?php
-    // Memanggil topbar
-    include ('../fh/header.php');
-    ?>
-
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light d-none d-lg-block">
+        <div class="row py-2 px-lg-5">
+            <div class="col-lg-6 text-left mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center">
+                    <small><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</small>
+                    <small class="px-3">|</small>
+                    <small><i class="fa fa-envelope mr-2"></i>AYLBeautySpa@gmail.com</small>
+                </div>
+            </div>
+            <div class="col-lg-6 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-primary px-2" href="">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-primary px-2" href="">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-primary px-2" href="">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="text-primary px-2" href="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="text-primary pl-2" href="">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
 
     <!-- Navbar Start -->
     <div class="container-fluid p-0">
@@ -74,7 +101,13 @@
                         
                         <center>
                         <h4>Masuk</h4><br>
+                        <?php if(isset($_GET['error'])){ ?>
+                        <div class="alert alert-danger" role="alert">
+                        <?php echo $_GET['error']; ?>
+                        </div>
+                        <?php } ?>
                         </center>
+
                         <div class="mb-3">
                             <label class="form-label">Email</label>
                             <input type="text" class="form-control" name="email" required autocomplete="off">
@@ -88,7 +121,7 @@
                             <select name="role">
                                 <option value="customer">Customer</option>
                                 <option value="admin">Admin</option>
-                                <option value="beatucian">Beatucian</option><br><br>
+                                <option value="beautician">Beautician</option><br><br>
                             </select>
                             </label>
                         </div>
@@ -129,7 +162,11 @@
                         </div>
                         <?php } ?>
 
-    
+                        <?php if(isset($_GET['success'])){ ?>
+                        <div class="alert alert-success" role="alert">
+                        <?php echo $_GET['success']; ?>
+                        </div>
+                        <?php } ?>
                         </center>
 
                         <div class="mb-3">
@@ -412,10 +449,17 @@
     <!-- Team End -->
 
 
-    <?php
-    // Memanggil footer
-    include ('../fh/footer.php');
-    ?>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                    <p class="m-0 text-white">&copy; <a href="#">AYLBeautySpa</a>. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
 
     <!-- Back to Top -->
@@ -449,5 +493,4 @@
     </script>
     
 </body>
-
 </html>

@@ -22,7 +22,7 @@ if (isset($_SESSION['nama'])) {
           die ("Reservasi gagal ditambahkan".mysqli_errno($koneksi).
           " - ".mysqli_error($koneksi));
         } else {
-          echo "<script>alert('Reservasi berhasil ditambahkan.');window.location='appointment.php';</script>";
+          header("location: appointment.php?pesan=Berhasil Di tambahkan");
         }
       }
 

@@ -12,5 +12,5 @@ $kode_reservasi = $_GET["kode_reservasi"];
       die ("Gagal menghapus data ".mysqli_errno($koneksi).
        " - ".mysqli_error($koneksi));
     } else {
-      echo "<script>alert('Data berhasil dihapus.');window.location='crud_reservasi.php';</script>";
+      header("location: crud_reservasi.php?pesan=Data Berhasil Di Hapus");
     }

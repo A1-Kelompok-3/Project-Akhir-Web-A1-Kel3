@@ -30,9 +30,33 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+
 </head>
 
 <body>
+
+    <?php 
+    if (isset($_GET['pesan'])) {
+        $pesan = $_GET['pesan'];
+        echo "<script>var pesan = '$pesan';
+                    swal({
+                      title: 'Berhasil',
+                      text: Reservasi Berhasil Ditambahkan,
+                      icon: 'success',
+                      button: 'OK'
+                    }).then(function() {
+                      window.location.href = 'appointment.php';
+                    });
+              </script>";
+      }
+    ?>
 
     <!-- Topbar Start -->
     <div class="container-fluid bg-light d-none d-lg-block">
@@ -139,14 +163,14 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <div class="date" id="date" data-target-input="nearest">
-                                            <input type="date" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Select Date" id= "tanggal" name="tanggal" data-target="#date" data-toggle="datetimepicker"/>
+                                            <input type="date"  min="<?php echo date('Y-m-d'); ?>" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Select Date" id= "tanggal" name="tanggal" data-target="#date" data-toggle="datetimepicker"/>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <div class="time" id="time" data-target-input="nearest">
-                                            <input type="time" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Select Time" data-target="#time" id= "waktu" name="waktu" autofocus="" data-toggle="datetimepicker"/>
+                                            <input type="time" min="09:00 AM" max="19:59 PM" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Select Time" data-target="#time" id= "waktu" name="waktu" autofocus="" data-toggle="datetimepicker"/>
                                         </div>
                                     </div>
                                 </div>
@@ -178,7 +202,7 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                <button class="btn btn-primary btn-block" type="submit" name= "submit" style="height: 47px;" onclick="return confirm('Apakah Anda sudah yakin dengan Reservasi ini?')">Buat Reservasi</button>
+                                <button class="btn btn-primary btn-block" type="submit" name= "submit" style="height: 47px;" onclick="reservasi()">Buat Reservasi</button>
                                 </div>
                             </div>
                         </form>
@@ -205,8 +229,8 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
                         <h1 class="mb-4">Best Relax And Spa</h1>
                         <p>Temukan waktu yang tepat untuk bersantai dan meremajakan diri dengan jadwal spa kami yang fleksibel</p>
                         <ul class="list-inline">
-                            <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Senin – Jumat : 9:00 - 20:00</li>
-                            <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Sabtu : 9:30 AM - 6:00 PM</li>
+                            <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Senin – Jumat : 9:00 - 18:00</li>
+                            <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Sabtu : 9:30 - 18:00</li>
                             <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Minggu : Tutup</li>
                         </ul>
                     </div>
@@ -251,6 +275,9 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
+
+ 
+  
 
     
 </body>

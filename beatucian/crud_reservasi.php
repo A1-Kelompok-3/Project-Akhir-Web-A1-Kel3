@@ -38,6 +38,10 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
 
      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css"> -->
      <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+
+     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
      
 
      <style type="text/css">
@@ -70,6 +74,22 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
 </head>
 
 <body>
+
+<?php 
+    if (isset($_GET['pesan'])) {
+        $pesan = $_GET['pesan'];
+        echo "<script>var pesan = '$pesan';
+                    swal({
+                      title: 'Berhasil',
+                      text: Reservasi Berhasil Ditambahkan,
+                      icon: 'success',
+                      button: 'OK'
+                    }).then(function() {
+                      window.location.href = 'appointment.php';
+                    });
+              </script>";
+      }
+    ?>
 
     <!-- Navbar Start -->
     <div class="container-fluid p-0">
@@ -145,8 +165,8 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
             <td><?php echo $row['waktu']; ?></td>
             <td><?php echo $row['treatment']; ?></td>
             <td width="15%">
-            <a href="proses_hapus.php?kode_reservasi=<?php echo $row['kode_reservasi']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')" class="btn btn-primary btn-sm">Hapus</a> |
-                <a href="selesai.php?kode_reservasi=<?php echo $row['kode_reservasi']; ?>" onclick="return confirm('Apakah Reservasi ini Telah Selesai?')" class="btn btn-primary btn-sm">Selesai</a>
+            <a href="#" onclick="hapus(<?php echo $row['kode_reservasi'];?>)" class="btn btn-primary btn-sm">Hapus</a> |
+                <a href="#" onclick="selesai(<?php echo $row['kode_reservasi'];?>)" class="btn btn-primary btn-sm">Selesai</a>
             </td>
         </tr>
             
@@ -196,6 +216,58 @@ if (isset($_SESSION['id_user']) && isset($_SESSION['nama'])) {
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
+
+    <script>
+        function hapus(kode_reservasi){
+            swal({
+      title: "Apakah anda yakin?",
+      text: "Anda tidak dapat mengembalikan ini!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        swal("Berhasil menghapus data", {
+          icon: "success",
+          button: "OK"
+        });
+        setTimeout(function() {
+          window.location.href = "proses_hapus.php?kode_reservasi="+kode_reservasi;
+        }, 2000);
+      } else {
+        swal("Data tidak jadi dihapus!", {
+          icon: "info",
+          button: "OK"
+        });
+      }
+    });
+        }
+        function selesai(kode_reservasi){
+            swal({
+      title: "Apakah anda yakin?",
+      text: "Anda tidak dapat mengembalikan ini!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then((selesai) => {
+      if (selesai) {
+        swal("Berhasil Menyimpan data", {
+          icon: "success",
+          button: "OK"
+        });
+        setTimeout(function() {
+          window.location.href = "selesai.php?kode_reservasi="+kode_reservasi;
+        }, 2000);
+      } else {
+        swal("Data tidak jadi disimpan!", {
+          icon: "info",
+          button: "OK"
+        });
+      }
+    });
+        }
+    </script>
+    
 
     <script>
         $(document).ready(function () {

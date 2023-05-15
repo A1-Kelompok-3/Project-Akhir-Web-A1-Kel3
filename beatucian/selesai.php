@@ -28,7 +28,7 @@ include('../php/conn.php');
           // Menghapus data dari tabel reservasi
           $sql_reservasi = "DELETE FROM reservasi WHERE kode_reservasi = $kode_reservasi";
           $koneksi->query($sql_reservasi);
-          echo "<script>alert('data berhasil ditambahkan ke dalam Riwayat');window.location='crud_reservasi.php';</script>";
+          header("location: crud_reservasi.php?pesan=Data Berhasil Di Simpan");
         }
     }
 
